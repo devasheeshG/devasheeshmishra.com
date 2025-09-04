@@ -1,17 +1,18 @@
 # Multi-stage build for Next.js (Node 18 LTS)
-FROM node:18-alpine AS deps
+FROM node:22.2.0-slim AS deps
 WORKDIR /app
-COPY package.json package-lock.json* ./
-RUN npm ci --no-audit --no-fund
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+RUN npm install -g pnpm@8
+RUN pnpm install --frozen-lockfile
 
-FROM node:18-alpine AS builder
+FROM node:22.2.0-slim AS builder
 WORKDIR /app
 ENV NEXT_TELEMETRY_DISABLED=1
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-RUN npm run build
+RUN pnpm build
 
-FROM node:18-alpine AS runner
+FROM node:22.2.0-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
@@ -22,4 +23,4 @@ COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/next.config.js ./next.config.js
 COPY --from=builder /app/node_modules ./node_modules
 USER nextjs
-CMD ["npm", "start"]
+CMD ["pnpm", "start"]
