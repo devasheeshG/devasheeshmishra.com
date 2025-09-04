@@ -1,16 +1,15 @@
-import type { Metadata } from "next";
-import { Suspense } from "react";
 import { CommandMenu } from "@/components/command-menu";
-import { SectionErrorBoundary } from "@/components/section-error-boundary";
-import { SectionSkeleton } from "@/components/section-skeleton";
+import { Metadata } from "next";
 import { RESUME_DATA } from "@/data/resume-data";
-import { generateResumeStructuredData } from "@/lib/structured-data";
-import { Education } from "./components/Education";
-import { Header } from "./components/Header";
-import { Projects } from "./components/Projects";
-import { Skills } from "./components/Skills";
-import { Summary } from "./components/Summary";
 import { WorkExperience } from "./components/WorkExperience";
+import { Projects } from "./components/Projects";
+import { Education } from "./components/Education";
+import { Summary } from "./components/Summary";
+import { Skills } from "./components/Skills";
+import { Header } from "./components/Header";
+import { Achievements } from "./components/Achievements";
+import { Certifications } from "./components/Certifications";
+import { Extracurricular } from "./components/Extracurricular";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} - Resume`,
@@ -22,7 +21,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://cv.jarocki.me/opengraph-image",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: `${RESUME_DATA.name}'s profile picture`,
@@ -33,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${RESUME_DATA.name} - Resume`,
     description: RESUME_DATA.about,
-    images: ["https://cv.jarocki.me/opengraph-image"],
+    images: ["/opengraph-image"],
   },
 };
 
@@ -41,17 +40,8 @@ export const metadata: Metadata = {
  * Transform social links for command menu
  */
 function getCommandMenuLinks() {
-  const links = [];
-
-  if (RESUME_DATA.personalWebsiteUrl) {
-    links.push({
-      url: RESUME_DATA.personalWebsiteUrl,
-      title: "Personal Website",
-    });
-  }
 
   return [
-    ...links,
     ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
       url: socialMediaLink.url,
       title: socialMediaLink.name,
@@ -117,6 +107,24 @@ export default function ResumePage() {
             <SectionErrorBoundary sectionName="Projects">
               <Suspense fallback={<SectionSkeleton lines={5} />}>
                 <Projects projects={RESUME_DATA.projects} />
+              </Suspense>
+            </SectionErrorBoundary>
+
+            <SectionErrorBoundary sectionName="Certifications">
+              <Suspense fallback={<SectionSkeleton lines={3} />}>
+                <Certifications certifications={RESUME_DATA.certifications} />
+              </Suspense>
+            </SectionErrorBoundary>
+
+            <SectionErrorBoundary sectionName="Achievements">
+              <Suspense fallback={<SectionSkeleton lines={3} />}>
+                <Achievements achievements={RESUME_DATA.achievements} />
+              </Suspense>
+            </SectionErrorBoundary>
+
+            <SectionErrorBoundary sectionName="Extracurricular Activities">
+              <Suspense fallback={<SectionSkeleton lines={3} />}>
+                <Extracurricular extracurricular={RESUME_DATA.extracurricular} />
               </Suspense>
             </SectionErrorBoundary>
           </div>
