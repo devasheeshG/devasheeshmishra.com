@@ -15,8 +15,7 @@ const nextConfig = {
         hostname: 'proeffico.com',
       },
     ],
-    domains: ['avatars.githubusercontent.com'],
-    formats: ['image/avif', 'image/webp'],
+    // formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60,
   },
 
