@@ -1,10 +1,27 @@
-version: '3.8'
-
 services:
-  app:
+  resume-website:
     build: .
-    ports:
-      - '3000:3000'
-    environment:
-      - NODE_ENV=production
+    image: resume-website:v1.0
+    container_name: resume-website
+    # image: cr.devasheeshmishra.com/personal/resume-website:v1.0
     restart: unless-stopped
+    networks:
+      - personal_prod
+    labels:
+      - traefik.enable=true
+      # Main router for devasheeshmishra.com
+      - traefik.http.routers.resume-website.rule=Host(`devasheeshmishra.com`)
+      - traefik.http.routers.resume-website.entrypoints=personal
+      - traefik.http.services.resume-website.loadbalancer.server.port=3000
+      # Redirect router for www to non-www
+      - traefik.http.routers.resume-website-www.rule=Host(`www.devasheeshmishra.com`)
+      - traefik.http.routers.resume-website-www.entrypoints=personal
+      - traefik.http.routers.resume-website-www.middlewares=redirect-to-non-www
+      # Middleware to handle the redirection
+      - traefik.http.middlewares.redirect-to-non-www.redirectregex.regex=^https?://www\.(.*)
+      - traefik.http.middlewares.redirect-to-non-www.redirectregex.replacement=http://$${1}
+      - traefik.http.middlewares.redirect-to-non-www.redirectregex.permanent=true
+
+networks:
+  personal_prod:
+    external: true

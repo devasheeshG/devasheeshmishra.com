@@ -5,6 +5,16 @@ const nextConfig = {
 
   // Optimize images
   images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'proeffico.com',
+      },
+    ],
     domains: ['avatars.githubusercontent.com'],
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60,
