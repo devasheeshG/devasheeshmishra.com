@@ -10,5 +10,10 @@
         "package-lock.json": true,
         "yarn.lock": true,
         ".next": true,
-    }
+    },
+    "compareFolders.excludeFilter": [
+        "**/node_modules",
+        "**/.next",
+        "**/.git"
+    ]
 }
