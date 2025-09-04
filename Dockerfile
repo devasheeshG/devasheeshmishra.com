@@ -1,7 +1,7 @@
 # Multi-stage build for Next.js (Node 18 LTS)
 FROM node:22.2.0-slim AS deps
 WORKDIR /app
-COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY package.json pnpm-lock.yaml ./
 RUN npm install -g pnpm@8
 RUN pnpm install --frozen-lockfile
 
