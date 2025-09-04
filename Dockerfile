@@ -1,26 +1,28 @@
-# Multi-stage build for Next.js (Node 18 LTS)
-FROM node:22.2.0-slim AS deps
+FROM node:22.2.0-slim as BUILD_STAGE
+
 WORKDIR /app
-COPY package.json pnpm-lock.yaml ./
+
+# Install pnpm
 RUN npm install -g pnpm@8
+
+COPY package.json pnpm-lock.yaml ./
+
 RUN pnpm install --frozen-lockfile
 
-FROM node:22.2.0-slim AS builder
-WORKDIR /app
-ENV NEXT_TELEMETRY_DISABLED=1
-COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+
 RUN pnpm build
 
-FROM node:22.2.0-alpine AS runner
+FROM node:alpine
+
 WORKDIR /app
-ENV NODE_ENV=production
-ENV NEXT_TELEMETRY_DISABLED=1
-RUN addgroup -g 1001 -S nodejs && adduser -S nextjs -u 1001
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/package.json ./package.json
-COPY --from=builder /app/next.config.js ./next.config.js
-COPY --from=builder /app/node_modules ./node_modules
-USER nextjs
+
+# Install pnpm in production stage
+RUN npm install -g pnpm@8
+
+COPY --from=BUILD_STAGE /app/package.json ./package.json
+COPY --from=BUILD_STAGE /app/node_modules ./node_modules
+COPY --from=BUILD_STAGE /app/.next ./.next
+COPY --from=BUILD_STAGE /app/public ./public
+
 CMD ["pnpm", "start"]
