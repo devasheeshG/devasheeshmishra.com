@@ -1,8 +1,9 @@
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
 import type { RESUME_DATA } from "@/data/resume-data";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 type WorkExperience = (typeof RESUME_DATA)["work"][number];
 type WorkBadges = readonly string[];
@@ -41,18 +42,29 @@ function BadgeList({ className, badges }: BadgeListProps) {
 interface WorkPeriodProps {
   start: WorkExperience["start"];
   end?: WorkExperience["end"];
+  location?: string;
 }
 
 /**
- * Displays the work period in a consistent format
+ * Displays the work period and location in a consistent format
  */
-function WorkPeriod({ start, end }: WorkPeriodProps) {
+function WorkPeriod({ start, end, location }: WorkPeriodProps) {
   return (
-    <div
-      className="text-sm tabular-nums text-gray-500"
-      title={`Employment period: ${start} to ${end ?? "Present"}`}
-    >
-      {start} - {end ?? "Present"}
+    <div className="text-sm text-gray-500 space-y-1">
+      <div
+        className="tabular-nums"
+        aria-label={`Employment period: ${start} to ${end ?? "Present"}`}
+      >
+        {start} - {end ?? "Present"}
+      </div>
+      {location && (
+        <div
+          className="text-xs font-medium text-gray-600"
+          aria-label={`Work location: ${location}`}
+        >
+          📍 {location}
+        </div>
+      )}
     </div>
   );
 }
@@ -79,29 +91,70 @@ function CompanyLink({ company, link }: CompanyLinkProps) {
   );
 }
 
+interface CompanyLogoProps {
+  logoUrl?: string;
+  company: string;
+}
+
+/**
+ * Renders company logo with fallback to company initials
+ */
+function CompanyLogo({ logoUrl, company }: CompanyLogoProps) {
+  if (logoUrl) {
+    return (
+      <Image
+        className="size-6 rounded-sm"
+        src={logoUrl}
+        alt={`${company} logo`}
+        width={24}
+        height={24}
+        unoptimized={logoUrl.startsWith("data:")}
+      />
+    );
+  }
+
+  // Fallback to company initials
+  const initials = company
+    .split(" ")
+    .map((word) => word[0])
+    .join("")
+    .toUpperCase()
+    .slice(0, 2);
+
+  return (
+    <div className="flex size-6 items-center justify-center rounded-sm bg-muted text-xs font-semibold">
+      {initials}
+    </div>
+  );
+}
+
 interface WorkExperienceItemProps {
   work: WorkExperience;
 }
 
 /**
  * Individual work experience card component
- * Handles responsive layout for badges (mobile/desktop)
+ * Handles responsive layout for badges (mobile/desktop) and displays location separately
  */
 function WorkExperienceItem({ work }: WorkExperienceItemProps) {
-  const { company, link, badges, title, start, end, description } = work;
+  const { company, link, badges, title, start, end, description, logoUrl } =
+    work;
+  // Extract location from work object, with fallback to undefined if not present
+  const location = "location" in work ? work.location : undefined;
 
   return (
     <Card className="py-1 print:py-0">
       <CardHeader className="print:space-y-1">
         <div className="flex items-center justify-between gap-x-2 text-base">
           <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none print:text-sm">
+            <CompanyLogo logoUrl={logoUrl} company={company} />
             <CompanyLink company={company} link={link} />
             <BadgeList
               className="hidden gap-x-1 sm:inline-flex"
               badges={badges}
             />
           </h3>
-          <WorkPeriod start={start} end={end} />
+          <WorkPeriod start={start} end={end} location={location} />
         </div>
 
         <h4 className="font-mono text-sm font-semibold leading-none print:text-[12px]">

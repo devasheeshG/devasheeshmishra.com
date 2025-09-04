@@ -106,6 +106,8 @@ export function Header() {
           location={RESUME_DATA.location}
           locationLink={RESUME_DATA.locationLink}
         />
+
+        <ContactButtons contact={RESUME_DATA.contact} />
       </div>
 
       <Avatar className="size-28" aria-hidden="true">

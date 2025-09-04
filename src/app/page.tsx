@@ -1,4 +1,8 @@
 import { CommandMenu } from "@/components/command-menu";
+import { Suspense } from "react";
+import { SectionErrorBoundary } from "@/components/section-error-boundary";
+import { SectionSkeleton } from "@/components/section-skeleton";
+import { generateResumeStructuredData } from "@/lib/structured-data";
 import { Metadata } from "next";
 import { RESUME_DATA } from "@/data/resume-data";
 import { WorkExperience } from "./components/WorkExperience";
@@ -40,7 +44,6 @@ export const metadata: Metadata = {
  * Transform social links for command menu
  */
 function getCommandMenuLinks() {
-
   return [
     ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
       url: socialMediaLink.url,
@@ -124,7 +127,9 @@ export default function ResumePage() {
 
             <SectionErrorBoundary sectionName="Extracurricular Activities">
               <Suspense fallback={<SectionSkeleton lines={3} />}>
-                <Extracurricular extracurricular={RESUME_DATA.extracurricular} />
+                <Extracurricular
+                  extracurricular={RESUME_DATA.extracurricular}
+                />
               </Suspense>
             </SectionErrorBoundary>
           </div>

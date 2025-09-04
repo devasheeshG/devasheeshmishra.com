@@ -1,4 +1,10 @@
-import { GitHubIcon, LinkedInIcon, HuggingFaceIcon, WhatsAppIcon, XIcon } from "@/components/icons";
+import {
+  GitHubIcon,
+  LinkedInIcon,
+  HuggingFaceIcon,
+  WhatsAppIcon,
+  XIcon,
+} from "@/components/icons";
 
 export const RESUME_DATA = {
   name: "Devasheesh Mishra",
@@ -6,12 +12,13 @@ export const RESUME_DATA = {
   location: "San Francisco, USA",
   locationLink: "https://www.google.com/maps/place/San+Francisco",
   personalWebsiteUrl: "https://devasheeshmishra.com",
-  about: "Founder and CEO of Recallr AI, building long term memory layer for conversational AI agents.",
+  about:
+    "Founder and CEO of Recallr AI, building long term memory layer for conversational AI agents.",
   summary: (
     <>
-      Founder and CEO of Recallr AI, building long-term memory for conversational
-      AI agents. Was selected for Y Combinator&apos;s first ever AI Startup School
-      among 2,000 top CS students globally.
+      Founder and CEO of Recallr AI, building long-term memory for
+      conversational AI agents. Was selected for Y Combinator&apos;s first ever
+      AI Startup School among 2,000 top CS students globally.
     </>
   ),
   avatarUrl: "https://avatars.githubusercontent.com/u/72092910?v=4",
@@ -55,7 +62,8 @@ export const RESUME_DATA = {
     // },
     {
       school: "SRM Institute of Science and Technology",
-      degree: "Bachelor of Technology in Computer Science, Specialization in AI and ML; CGPA: 8.2",
+      degree:
+        "Bachelor of Technology in Computer Science, Specialization in AI and ML; CGPA: 8.2",
       start: "2022",
       end: "2026",
     },
@@ -72,15 +80,14 @@ export const RESUME_DATA = {
       end: null,
       description: (
         <>
-          Building Long term memory for conversational AI agents, enabling them to
-          remember and recall information across sessions.
+          Building Long term memory for conversational AI agents, enabling them
+          to remember and recall information across sessions.
           <ul className="list-inside list-disc">
             <li>
-              Got selected for an interview at Y Combinator for the Summer 2025 batch
+              Got selected for an interview at Y Combinator for the Summer 2025
+              batch
             </li>
-            <li>
-              Currently raising a pre-seed round of funding
-            </li>
+            <li>Currently raising a pre-seed round of funding</li>
           </ul>
         </>
       ),
@@ -96,19 +103,18 @@ export const RESUME_DATA = {
       end: "2025",
       description: (
         <>
-          Founded an AI Home Automation company, successfully shipping v1.0 of the
-          product in a month and acquired 50+ beta testers.
+          Founded an AI Home Automation company, successfully shipping v1.0 of
+          the product in a month and acquired 50+ beta testers.
           <ul className="list-inside list-disc">
             <li>
-              Developed high-end home automation solution with Smart TV, Fire Stick,
-              and switch board integrations
+              Developed high-end home automation solution with Smart TV, Fire
+              Stick, and switch board integrations
             </li>
             <li>
-              Selected for buildspace&apos;s Nights & Weekends S5 program, backed by Y Combinator and a16z
+              Selected for buildspace&apos;s Nights & Weekends S5 program,
+              backed by Y Combinator and a16z
             </li>
-            <li>
-              Now whitelabeling the home automation tech to other players
-            </li>
+            <li>Now whitelabeling the home automation tech to other players</li>
           </ul>
         </>
       ),
@@ -119,7 +125,8 @@ export const RESUME_DATA = {
       location: "On-site",
       badges: ["AI/ML", "Computer Vision", "Databases"],
       title: "AI/ML Engineer Intern",
-      logoUrl: "https://proeffico.com/wp-content/uploads/2023/09/Copy-of-proeffico-logo-1.png",
+      logoUrl:
+        "https://proeffico.com/wp-content/uploads/2023/09/Copy-of-proeffico-logo-1.png",
       start: "2024",
       end: "2024",
       description: (
@@ -127,11 +134,10 @@ export const RESUME_DATA = {
           Developed AI solutions for enterprise clients and internal tools.
           <ul className="list-inside list-disc">
             <li>
-              Developed &ldquo;RDBMS Chat&rdquo;, enabling non-technical staff to query databases using natural language
+              Developed &ldquo;RDBMS Chat&rdquo;, enabling non-technical staff
+              to query databases using natural language
             </li>
-            <li>
-              Provided IT infrastructure support for servers and VMs
-            </li>
+            <li>Provided IT infrastructure support for servers and VMs</li>
           </ul>
         </>
       ),
@@ -147,10 +153,12 @@ export const RESUME_DATA = {
       end: "2024",
       description: (
         <>
-          Selected for an exclusive startup program backed by Y Combinator and a16z.
+          Selected for an exclusive startup program backed by Y Combinator and
+          a16z.
           <ul className="list-inside list-disc">
             <li>
-              Accelerated development of Stapes AI through community feedback and mentorship
+              Accelerated development of Stapes AI through community feedback
+              and mentorship
             </li>
             <li>
               Applied skills in Python, Flutter, and embedded systems (ESP IDF)
@@ -172,15 +180,12 @@ export const RESUME_DATA = {
         <>
           Leading technical education and community building initiatives.
           <ul className="list-inside list-disc">
+            <li>Conducted comprehensive ML workshops for 80+ students</li>
             <li>
-              Conducted comprehensive ML workshops for 80+ students
+              Organized 10+ GeeksforGeeks workshops, enhancing coding
+              proficiency for 200+ students
             </li>
-            <li>
-              Organized 10+ GeeksforGeeks workshops, enhancing coding proficiency for 200+ students
-            </li>
-            <li>
-              Led a team of 8 technical staff managing project timelines
-            </li>
+            <li>Led a team of 8 technical staff managing project timelines</li>
           </ul>
         </>
       ),
@@ -198,9 +203,7 @@ export const RESUME_DATA = {
         <>
           Core member organizing technical events and hackathons.
           <ul className="list-inside list-disc">
-            <li>
-              Organized Phoenix Hackathon where I achieved 1st place
-            </li>
+            <li>Organized Phoenix Hackathon where I achieved 1st place</li>
             <li>
               Led Hack-Innovate, attracting 300+ participants with 50+ solutions
             </li>
@@ -231,7 +234,13 @@ export const RESUME_DATA = {
   projects: [
     {
       title: "Automatic Speech Recognition System",
-      techStack: ["PyTorch", "Transformers", "FastAPI", "WebSockets", "Whisper"],
+      techStack: [
+        "PyTorch",
+        "Transformers",
+        "FastAPI",
+        "WebSockets",
+        "Whisper",
+      ],
       description:
         "Fine-tuned 2x Whisper models (750M & 1.1B parameters) for Hindi using 10,000 hours of audio. Achieved RTF of 0.3 and reduced inference latency to 200-300ms.",
       link: {
@@ -253,7 +262,8 @@ export const RESUME_DATA = {
   achievements: [
     {
       title: "Y Combinator's AI Startup School",
-      description: "Selected among 2,000 top CS students globally to attend YC's first-ever AI Startup School in San Francisco.",
+      description:
+        "Selected among 2,000 top CS students globally to attend YC's first-ever AI Startup School in San Francisco.",
       year: "2024",
       link: "https://www.ycombinator.com/events/ai-startup-school",
     },
@@ -317,4 +327,4 @@ export const RESUME_DATA = {
       period: "July 2024 - September 2024",
     },
   ],
-} as const;
+};

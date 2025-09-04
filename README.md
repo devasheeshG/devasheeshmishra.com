@@ -86,8 +86,7 @@ src/
 │   ├── layout.tsx    # Root layout with metadata
 │   └── page.tsx      # Main resume page
 ├── components/       # React components
-│   ├── ui/          # shadcn/ui components
-│   └── icons/       # Icon components
+│   └── ui/          # shadcn/ui components
 ├── data/            # Resume data configuration
 │   └── resume-data.tsx
 ├── images/          # Static assets

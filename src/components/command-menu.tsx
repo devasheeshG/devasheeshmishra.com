@@ -19,6 +19,8 @@ interface Props {
 
 export const CommandMenu = ({ links }: Props) => {
   const [open, setOpen] = React.useState(false);
+  const RESUME_PRINT_URL =
+    "https://cloud.devasheeshmishra.com/s/resume" as const;
   const isMac: boolean =
     typeof window !== "undefined"
       ? window.navigator.userAgent.indexOf("Mac") > -1
@@ -29,6 +31,16 @@ export const CommandMenu = ({ links }: Props) => {
       if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
         setOpen((open) => !open);
+      }
+
+      // Intercept Ctrl/Cmd+P to open the hosted resume in a new tab
+      if ((e.metaKey || e.ctrlKey) && (e.key === "p" || e.key === "P")) {
+        e.preventDefault();
+        try {
+          window.open(RESUME_PRINT_URL, "_blank", "noopener,noreferrer");
+        } catch (err) {
+          // no-op
+        }
       }
     };
 
@@ -61,7 +73,16 @@ export const CommandMenu = ({ links }: Props) => {
             <CommandItem
               onSelect={() => {
                 setOpen(false);
-                window.print();
+                // Open hosted resume in a new tab instead of printing locally
+                try {
+                  window.open(
+                    RESUME_PRINT_URL,
+                    "_blank",
+                    "noopener,noreferrer"
+                  );
+                } catch (err) {
+                  // no-op
+                }
               }}
             >
               <span>Print</span>
