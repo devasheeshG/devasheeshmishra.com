@@ -94,7 +94,8 @@ export const RESUME_DATA = {
     },
     {
       company: "Stapes AI",
-      link: "https://stapes.ai",
+      // link: "https://stapes.ai",
+      link: null,
       location: "On-site",
       badges: ["AI", "IoT", "Home Automation", "Startup"],
       title: "Founder and CEO",

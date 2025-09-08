@@ -81,7 +81,7 @@ function CompanyLink({ company, link }: CompanyLinkProps) {
   return (
     <a
       className="hover:underline"
-      href={link}
+      href={link ?? undefined}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={`${company} company website`}
