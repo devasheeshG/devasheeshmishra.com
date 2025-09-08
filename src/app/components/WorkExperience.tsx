@@ -108,7 +108,7 @@ function CompanyLogo({ logoUrl, company }: CompanyLogoProps) {
         alt={`${company} logo`}
         width={24}
         height={24}
-        unoptimized={logoUrl.startsWith("data:")}
+        // unoptimized={logoUrl.startsWith("data:")}
       />
     );
   }

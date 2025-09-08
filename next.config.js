@@ -14,9 +14,13 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'proeffico.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'media.geeksforgeeks.org',
+      },
     ],
     // formats: ['image/avif', 'image/webp'],
-    minimumCacheTTL: 60,
+    // minimumCacheTTL: 60,
   },
 
   // Compress output
