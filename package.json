@@ -30,6 +30,7 @@
     "react": "^18",
     "react-dom": "^18",
     "reflect-metadata": "^0.2.2",
+    "sharp": "^0.34.3",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7",
     "type-graphql": "^2.0.0-beta.6",
