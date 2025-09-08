@@ -4,7 +4,6 @@ import { Section } from "@/components/ui/section";
 import type { RESUME_DATA } from "@/data/resume-data";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import * as React from "react";
 
 type WorkExperience = (typeof RESUME_DATA)["work"][number];
 type WorkBadges = readonly string[];
@@ -101,10 +100,7 @@ interface CompanyLogoProps {
  * Renders company logo with fallback to company initials
  */
 function CompanyLogo({ logoUrl, company }: CompanyLogoProps) {
-  const [errored, setErrored] = React.useState(false);
-
-  if (logoUrl && !errored) {
-    const isExternal = /^https?:\/\//.test(logoUrl);
+  if (logoUrl) {
     return (
       <Image
         className="size-6 rounded-sm"
@@ -112,9 +108,8 @@ function CompanyLogo({ logoUrl, company }: CompanyLogoProps) {
         alt={`${company} logo`}
         width={24}
         height={24}
-        unoptimized={isExternal}
         referrerPolicy="no-referrer"
-        onError={() => setErrored(true)}
+        // unoptimized={logoUrl.startsWith("data:")}
       />
     );
   }
