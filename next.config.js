@@ -9,14 +9,18 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'avatars.githubusercontent.com',
+        // Allow GitHub avatar user paths like /u/12345
+        pathname: '/u/**',
       },
       {
         protocol: 'https',
         hostname: 'proeffico.com',
+        pathname: '/**',
       },
       {
         protocol: 'https',
         hostname: 'media.geeksforgeeks.org',
+        pathname: '/**',
       },
     ],
     // formats: ['image/avif', 'image/webp'],
