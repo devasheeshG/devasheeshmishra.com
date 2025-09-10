@@ -75,7 +75,7 @@ export const RESUME_DATA = {
       location: "On-site",
       badges: ["AI", "Memory Systems", "Y Combinator"],
       title: "Founder and CEO",
-      logoUrl: "/193800346.jpg",
+      logoUrl: "https://avatars.githubusercontent.com/u/193800346?v=4",
       start: "2025",
       end: null,
       description: (
@@ -98,7 +98,7 @@ export const RESUME_DATA = {
       location: "On-site",
       badges: ["AI", "IoT", "Home Automation", "Startup"],
       title: "Founder and CEO",
-      logoUrl: "/99021598.png",
+      logoUrl: "https://avatars.githubusercontent.com/u/99021598?v=4",
       start: "2024",
       end: "2025",
       description: (
@@ -125,7 +125,8 @@ export const RESUME_DATA = {
       location: "On-site",
       badges: ["AI/ML", "Computer Vision", "Databases"],
       title: "AI/ML Engineer Intern",
-      logoUrl: "/Copy-of-proeffico-logo-1.png",
+      logoUrl:
+        "https://proeffico.com/wp-content/uploads/2023/09/Copy-of-proeffico-logo-1.png",
       start: "2024",
       end: "2024",
       description: (
@@ -147,7 +148,7 @@ export const RESUME_DATA = {
       location: "Remote",
       badges: ["Startup Accelerator", "Product Development"],
       title: "Builder, Nights & Weekends S5",
-      logoUrl: "/65048157.png",
+      logoUrl: "https://avatars.githubusercontent.com/u/65048157?v=4",
       start: "2024",
       end: "2024",
       description: (
