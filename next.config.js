@@ -16,4 +16,15 @@ module.exports = {
       },
     ],
   },
+
+  // Compress output
+  compress: true,
+
+  // Enable SWC minification
+  swcMinify: true,
+  // Reduce bundle size by excluding source maps in production
+  productionBrowserSourceMaps: false,
+
+  // PoweredByHeader removes the X-Powered-By header
+  poweredByHeader: false,
 };
