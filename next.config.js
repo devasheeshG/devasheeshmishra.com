@@ -22,6 +22,7 @@ module.exports = {
 
   // Enable SWC minification
   swcMinify: true,
+
   // Reduce bundle size by excluding source maps in production
   productionBrowserSourceMaps: false,
 
