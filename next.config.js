@@ -5,21 +5,14 @@ module.exports = {
       {
         protocol: "https",
         hostname: "avatars.githubusercontent.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "cdn.worldvectorlogo.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "proeffico.com",
-        pathname: "/**",
       },
       {
         protocol: "https",
         hostname: "media.geeksforgeeks.org",
+      },
+      {
+        protocol: "https",
+        hostname: "proeffico.com",
         pathname: "/**",
       },
       { protocol: "https", hostname: "www.gstatic.com", pathname: "/**" },
