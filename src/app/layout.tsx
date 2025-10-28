@@ -1,4 +1,5 @@
-// import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 
@@ -88,7 +89,8 @@ export default function RootLayout({
       <body>
         <ErrorBoundary>{children}</ErrorBoundary>
       </body>
-      {/* <Analytics /> */}
+      <SpeedInsights />
+      <Analytics />
     </html>
   );
 }
