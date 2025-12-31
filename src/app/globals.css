@@ -81,7 +81,8 @@
 
 /* Print tweaks to reduce unexpected whitespace and pagination issues */
 @media print {
-  html, body {
+  html,
+  body {
     height: auto;
     overflow: visible !important;
   }

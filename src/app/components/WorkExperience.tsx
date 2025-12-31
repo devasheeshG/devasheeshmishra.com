@@ -51,19 +51,11 @@ interface WorkPeriodProps {
 function WorkPeriod({ start, end, location }: WorkPeriodProps) {
   return (
     <div className="text-sm text-gray-500 space-y-1">
-      <div
-        className="tabular-nums"
-        aria-label={`Employment period: ${start} to ${end ?? "Present"}`}
-      >
+      <div className="tabular-nums">
         {start} - {end ?? "Present"}
       </div>
       {location && (
-        <div
-          className="text-xs font-medium text-gray-600"
-          aria-label={`Work location: ${location}`}
-        >
-          📍 {location}
-        </div>
+        <div className="text-xs font-medium text-gray-600">📍 {location}</div>
       )}
     </div>
   );

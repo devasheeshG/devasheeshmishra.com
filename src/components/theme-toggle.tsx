@@ -15,7 +15,9 @@ export function ThemeToggle() {
     // Initialize from current document state set by theme-init script
     try {
       setIsDark(document.documentElement.classList.contains("dark"));
-    } catch {}
+    } catch {
+      // Ignore errors during SSR
+    }
   }, []);
 
   const applyTheme = React.useCallback((dark: boolean) => {
@@ -25,10 +27,17 @@ export function ThemeToggle() {
     try {
       localStorage.setItem("theme", dark ? "dark" : "light");
       // Set a cookie for SSR to avoid initial flash; 1 year expiry, SameSite=Lax
-      const expires = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toUTCString();
-      const secure = typeof window !== "undefined" && window.location.protocol === "https:" ? "; Secure" : "";
+      const expires = new Date(
+        Date.now() + 365 * 24 * 60 * 60 * 1000
+      ).toUTCString();
+      const secure =
+        typeof window !== "undefined" && window.location.protocol === "https:"
+          ? "; Secure"
+          : "";
       document.cookie = `theme=${dark ? "dark" : "light"}; Expires=${expires}; Path=/; SameSite=Lax${secure}`;
-    } catch {}
+    } catch {
+      // Ignore cookie/localStorage errors
+    }
     setIsDark(dark);
   }, []);
 

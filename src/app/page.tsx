@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import { SectionErrorBoundary } from "@/components/section-error-boundary";
 import { SectionSkeleton } from "@/components/section-skeleton";
 import { generateResumeStructuredData } from "@/lib/structured-data";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { RESUME_DATA } from "@/data/resume-data";
 import { WorkExperience } from "./components/WorkExperience";
 import { Projects } from "./components/Projects";

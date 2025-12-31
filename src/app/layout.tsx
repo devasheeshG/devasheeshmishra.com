@@ -89,11 +89,11 @@ export default function RootLayout({
   // SSR: set initial theme class from cookie to avoid flash
   // Default to dark mode if no cookie is set
   const themeCookie = cookies().get("theme")?.value;
-  const isDark = themeCookie === "light" ? false : true; // Default to dark
+  const isDark = themeCookie !== "light"; // Default to dark
   const htmlClass = `${inter.className} ${isDark ? "dark" : ""}`.trim();
-  
+
   return (
-    <html lang="en" suppressHydrationWarning className={htmlClass}>
+    <html lang="en" suppressHydrationWarning={true} className={htmlClass}>
       <head>
         <Script id="theme-init" strategy="beforeInteractive">
           {`
