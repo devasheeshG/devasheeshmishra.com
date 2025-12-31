@@ -2,6 +2,8 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { cookies } from "next/headers";
+import Script from "next/script";
 
 import "./globals.css";
 import type React from "react";
@@ -84,8 +86,33 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // SSR: set initial theme class from cookie to avoid flash
+  // Default to dark mode if no cookie is set
+  const themeCookie = cookies().get("theme")?.value;
+  const isDark = themeCookie === "light" ? false : true; // Default to dark
+  const htmlClass = `${inter.className} ${isDark ? "dark" : ""}`.trim();
+  
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" suppressHydrationWarning className={htmlClass}>
+      <head>
+        <Script id="theme-init" strategy="beforeInteractive">
+          {`
+            try {
+              const getCookie = (name) => {
+                const m = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+                return m ? decodeURIComponent(m[2]) : null;
+              };
+              const fromCookie = getCookie('theme');
+              const ls = localStorage.getItem('theme');
+              const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+              // Default to dark mode
+              const theme = fromCookie || ls || 'dark';
+              if (theme === 'dark') document.documentElement.classList.add('dark');
+              else document.documentElement.classList.remove('dark');
+            } catch {}
+          `}
+        </Script>
+      </head>
       <body>
         <ErrorBoundary>{children}</ErrorBoundary>
       </body>

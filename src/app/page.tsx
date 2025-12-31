@@ -14,6 +14,7 @@ import { Header } from "./components/Header";
 import { Achievements } from "./components/Achievements";
 import { Certifications } from "./components/Certifications";
 import { Extracurricular } from "./components/Extracurricular";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} - Resume`,
@@ -73,7 +74,7 @@ export default function ResumePage() {
         </div>
 
         <section
-          className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-4"
+          className="mx-auto w-full max-w-2xl space-y-8 bg-card print:space-y-4"
           aria-label="Resume Content"
         >
           <SectionErrorBoundary sectionName="Header">
@@ -138,6 +139,7 @@ export default function ResumePage() {
         <nav className="print:hidden" aria-label="Quick navigation">
           <CommandMenu links={getCommandMenuLinks()} />
         </nav>
+        <ThemeToggle />
       </main>
     </>
   );
