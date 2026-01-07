@@ -23,7 +23,7 @@ export const RESUME_DATA = {
   ),
   avatarUrl: "https://avatars.githubusercontent.com/u/72092910?v=4",
   contact: {
-    email: "devasheeshmishra4@gmail.com",
+    email: "devasheesh@devasheeshmishra.com",
     tel: "+14152120310",
     social: [
       {
