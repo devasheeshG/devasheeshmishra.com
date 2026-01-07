@@ -78,3 +78,47 @@
 .print-force-new-page {
   page-break-before: always;
 }
+
+/* Print tweaks to reduce unexpected whitespace and pagination issues */
+@media print {
+  html,
+  body {
+    height: auto;
+    overflow: visible !important;
+  }
+  /* Remove container padding/margins on print to maximize page usage */
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  /* Force light theme tokens for print even if .dark is set */
+  .dark {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 220.9 39.3% 11%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+  }
+}

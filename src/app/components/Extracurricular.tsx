@@ -1,6 +1,6 @@
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
-import { RESUME_DATA } from "@/data/resume-data";
+import type { RESUME_DATA } from "@/data/resume-data";
 
 type ExtracurricularActivity = (typeof RESUME_DATA)["extracurricular"][number];
 
@@ -52,7 +52,7 @@ export function Extracurricular({ extracurricular }: ExtracurricularProps) {
         aria-labelledby="extracurricular"
       >
         {extracurricular.map((item) => (
-          <article key={`${item.position}-${item.organization}`} role="article">
+          <article key={`${item.position}-${item.organization}`}>
             <ExtracurricularItem activity={item} />
           </article>
         ))}

@@ -1,6 +1,6 @@
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
-import { RESUME_DATA } from "@/data/resume-data";
+import type { RESUME_DATA } from "@/data/resume-data";
 
 type Certification = (typeof RESUME_DATA)["certifications"][number];
 
@@ -75,7 +75,7 @@ export function Certifications({ certifications }: CertificationsProps) {
         aria-labelledby="certifications"
       >
         {certifications.map((item) => (
-          <article key={item.title} role="article">
+          <article key={item.title}>
             <CertificationItem certification={item} />
           </article>
         ))}

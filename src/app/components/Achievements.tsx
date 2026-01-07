@@ -1,6 +1,6 @@
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
-import { RESUME_DATA } from "@/data/resume-data";
+import type { RESUME_DATA } from "@/data/resume-data";
 
 type Achievement = (typeof RESUME_DATA)["achievements"][number];
 
@@ -78,7 +78,7 @@ export function Achievements({ achievements }: AchievementsProps) {
         aria-labelledby="achievements"
       >
         {achievements.map((item) => (
-          <article key={item.title} role="article">
+          <article key={item.title}>
             <AchievementItem achievement={item} />
           </article>
         ))}
