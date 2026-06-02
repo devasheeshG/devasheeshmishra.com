@@ -20,8 +20,7 @@ interface Props {
 export const CommandMenu = ({ links }: Props) => {
     const [open, setOpen] = React.useState(false);
     const [isMounted, setIsMounted] = React.useState(false);
-    const RESUME_PRINT_URL =
-        "https://cloud.devasheeshmishra.com/s/resume" as const;
+    const RESUME_PRINT_URL = "/resume.pdf" as const;
 
     React.useEffect(() => {
         setIsMounted(true);
