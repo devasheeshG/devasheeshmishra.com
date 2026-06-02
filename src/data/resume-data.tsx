@@ -23,7 +23,7 @@ export const RESUME_DATA = {
   ),
   avatarUrl: "https://avatars.githubusercontent.com/u/72092910?v=4",
   contact: {
-    email: "devasheesh@devasheeshmishra.com",
+    email: "devasheesh@recallrai.com",
     tel: "+14152120310",
     social: [
       {
@@ -54,16 +54,10 @@ export const RESUME_DATA = {
     ],
   },
   education: [
-    // {
-    //   school: "University of California, Berkeley",
-    //   degree: "Entrepreneurship and Technology (Scholarship Recipient)",
-    //   start: "2025",
-    //   end: "2026",
-    // },
     {
       school: "SRM Institute of Science and Technology",
       degree:
-        "Bachelor of Technology in Computer Science, Specialization in AI and ML; CGPA: 8.2",
+        "Bachelor of Technology in Computer Science, Specialization in AI and ML; CGPA: 8.5",
       start: "2022",
       end: "2026",
     },
