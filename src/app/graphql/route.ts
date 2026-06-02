@@ -11,45 +11,45 @@ let apolloServer: ApolloServer;
 let handler: any; // TODO: Replace 'any' with appropriate type
 
 try {
-  const schema = await buildSchema({
-    resolvers: [MeResolver],
-  });
+    const schema = await buildSchema({
+        resolvers: [MeResolver],
+    });
 
-  apolloServer = new ApolloServer({
-    schema,
-    plugins: [ApolloServerPluginLandingPageLocalDefault()],
-    introspection: process.env.NODE_ENV !== "production",
-    formatError: (err) => {
-      // Log error for debugging in development
-      if (process.env.NODE_ENV !== "production") {
-        console.error("GraphQL Error:", err);
-      }
+    apolloServer = new ApolloServer({
+        schema,
+        plugins: [ApolloServerPluginLandingPageLocalDefault()],
+        introspection: process.env.NODE_ENV !== "production",
+        formatError: (err) => {
+            // Log error for debugging in development
+            if (process.env.NODE_ENV !== "production") {
+                console.error("GraphQL Error:", err);
+            }
 
-      // Return sanitized error for production
-      return {
-        message:
-          process.env.NODE_ENV === "production"
-            ? "Internal server error"
-            : err.message,
-        code: err.extensions?.code,
-        path: err.path,
-      };
-    },
-  });
+            // Return sanitized error for production
+            return {
+                message:
+                    process.env.NODE_ENV === "production"
+                        ? "Internal server error"
+                        : err.message,
+                code: err.extensions?.code,
+                path: err.path,
+            };
+        },
+    });
 
-  handler = startServerAndCreateNextHandler<NextRequest>(apolloServer, {
-    context: async (req) => ({ req }),
-  });
+    handler = startServerAndCreateNextHandler<NextRequest>(apolloServer, {
+        context: async (req) => ({ req }),
+    });
 } catch (error) {
-  console.error("Failed to initialize Apollo Server:", error);
+    console.error("Failed to initialize Apollo Server:", error);
 
-  // Fallback handler for initialization errors
-  handler = async () => {
-    return NextResponse.json(
-      { error: "GraphQL server initialization failed" },
-      { status: 500 }
-    );
-  };
+    // Fallback handler for initialization errors
+    handler = async () => {
+        return NextResponse.json(
+            { error: "GraphQL server initialization failed" },
+            { status: 500 }
+        );
+    };
 }
 
 export { handler as GET, handler as POST };

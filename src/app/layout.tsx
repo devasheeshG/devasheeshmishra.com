@@ -11,92 +11,92 @@ import { ErrorBoundary } from "@/components/error-boundary";
 import { RESUME_DATA } from "@/data/resume-data";
 
 const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
+    subsets: ["latin"],
+    display: "swap",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(RESUME_DATA.personalWebsiteUrl),
-  title: {
-    default: `${RESUME_DATA.name} - ${RESUME_DATA.about}`,
-    template: `%s | ${RESUME_DATA.name}`,
-  },
-  description: RESUME_DATA.about,
-  keywords: [
-    "resume",
-    "cv",
-    "portfolio",
-    RESUME_DATA.name,
-    "software engineer",
-    "full stack developer",
-    "react",
-    "next.js",
-    "typescript",
-  ],
-  authors: [{ name: RESUME_DATA.name }],
-  creator: RESUME_DATA.name,
-  publisher: RESUME_DATA.name,
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: RESUME_DATA.personalWebsiteUrl,
-    siteName: `${RESUME_DATA.name}'s CV`,
-    title: `${RESUME_DATA.name} - ${RESUME_DATA.about}`,
-    description: RESUME_DATA.about,
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+    metadataBase: new URL(RESUME_DATA.personalWebsiteUrl),
+    title: {
+        default: `${RESUME_DATA.name} - ${RESUME_DATA.about}`,
+        template: `%s | ${RESUME_DATA.name}`,
     },
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${RESUME_DATA.name} - ${RESUME_DATA.about}`,
     description: RESUME_DATA.about,
-    creator: "@BartoszJarocki",
-  },
-  alternates: {
-    canonical: RESUME_DATA.personalWebsiteUrl,
-  },
+    keywords: [
+        "resume",
+        "cv",
+        "portfolio",
+        RESUME_DATA.name,
+        "software engineer",
+        "full stack developer",
+        "react",
+        "next.js",
+        "typescript",
+    ],
+    authors: [{ name: RESUME_DATA.name }],
+    creator: RESUME_DATA.name,
+    publisher: RESUME_DATA.name,
+    formatDetection: {
+        email: false,
+        address: false,
+        telephone: false,
+    },
+    openGraph: {
+        type: "website",
+        locale: "en_US",
+        url: RESUME_DATA.personalWebsiteUrl,
+        siteName: `${RESUME_DATA.name}'s CV`,
+        title: `${RESUME_DATA.name} - ${RESUME_DATA.about}`,
+        description: RESUME_DATA.about,
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: `${RESUME_DATA.name} - ${RESUME_DATA.about}`,
+        description: RESUME_DATA.about,
+        creator: "@BartoszJarocki",
+    },
+    alternates: {
+        canonical: RESUME_DATA.personalWebsiteUrl,
+    },
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 5,
+    themeColor: [
+        { media: "(prefers-color-scheme: light)", color: "white" },
+        { media: "(prefers-color-scheme: dark)", color: "black" },
+    ],
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }) {
-  // SSR: set initial theme class from cookie to avoid flash
-  // Default to dark mode if no cookie is set
-  const themeCookie = cookies().get("theme")?.value;
-  const isDark = themeCookie !== "light"; // Default to dark
-  const htmlClass = `${inter.className} ${isDark ? "dark" : ""}`.trim();
+    // SSR: set initial theme class from cookie to avoid flash
+    // Default to dark mode if no cookie is set
+    const themeCookie = cookies().get("theme")?.value;
+    const isDark = themeCookie !== "light"; // Default to dark
+    const htmlClass = `${inter.className} ${isDark ? "dark" : ""}`.trim();
 
-  return (
-    <html lang="en" suppressHydrationWarning={true} className={htmlClass}>
-      <head>
-        <Script id="theme-init" strategy="beforeInteractive">
-          {`
+    return (
+        <html lang="en" suppressHydrationWarning={true} className={htmlClass}>
+            <head>
+                <Script id="theme-init" strategy="beforeInteractive">
+                    {`
             try {
               const getCookie = (name) => {
                 const m = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
@@ -111,13 +111,13 @@ export default function RootLayout({
               else document.documentElement.classList.remove('dark');
             } catch {}
           `}
-        </Script>
-      </head>
-      <body>
-        <ErrorBoundary>{children}</ErrorBoundary>
-      </body>
-      <SpeedInsights />
-      <Analytics />
-    </html>
-  );
+                </Script>
+            </head>
+            <body>
+                <ErrorBoundary>{children}</ErrorBoundary>
+            </body>
+            <SpeedInsights />
+            <Analytics />
+        </html>
+    );
 }

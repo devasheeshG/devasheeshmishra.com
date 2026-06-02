@@ -5,8 +5,8 @@ import { Me } from "./type-defs";
 
 @Resolver(() => Me)
 export class MeResolver {
-  @Query(() => Me)
-  me(): Me {
-    return resumeDataToGraphQL(RESUME_DATA);
-  }
+    @Query(() => Me)
+    me(): Me {
+        return resumeDataToGraphQL(RESUME_DATA);
+    }
 }
