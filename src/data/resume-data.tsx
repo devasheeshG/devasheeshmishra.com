@@ -86,6 +86,29 @@ export const RESUME_DATA = {
             ),
         },
         {
+            company: "Founders, Inc.",
+            link: "https://f.inc/canopy",
+            location: "On-site",
+            badges: ["Startup Program", "San Francisco"],
+            title: "Canopy 2026",
+            logoUrl: "/founders-inc-logo.jpg",
+            start: "2026",
+            end: "2026",
+            description: (
+                <>
+                    Selected for Canopy 2026, a 5-week intensive builder program
+                    at Founders, Inc.&apos;s San Francisco campus.
+                    <ul className="list-inside list-disc">
+                        <li>One of 100 on-site teams selected globally</li>
+                        <li>
+                            Built alongside founders across software, hardware,
+                            and media verticals
+                        </li>
+                    </ul>
+                </>
+            ),
+        },
+        {
             company: "Stapes AI",
             link: "https://github.com/stapesai",
             location: "On-site",
