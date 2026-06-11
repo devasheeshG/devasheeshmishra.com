@@ -67,7 +67,7 @@ export const RESUME_DATA = {
             location: "On-site",
             badges: ["AI", "Memory Systems", "Y Combinator"],
             title: "Founder and CEO",
-            logoUrl: "https://avatars.githubusercontent.com/u/193800346?v=4",
+            logoUrl: "/recallrai-logo.png",
             start: "2025",
             end: null,
             description: (
@@ -306,7 +306,7 @@ export const RESUME_DATA = {
             title: "Y Combinator's AI Startup School",
             description:
                 "Selected among 2,000 top CS students globally to attend YC's first-ever AI Startup School in San Francisco.",
-            year: "2024",
+            year: "2025",
             link: "https://www.ycombinator.com/events/ai-startup-school",
         },
         {
