@@ -1,3 +1,7 @@
+allowBuilds:
+  - '@apollo/protobufjs'
+  - '@vercel/speed-insights'
+  - sharp
 onlyBuiltDependencies:
   - '@apollo/protobufjs'
   - '@vercel/speed-insights'

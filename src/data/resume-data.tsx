@@ -24,6 +24,7 @@ export const RESUME_DATA = {
     contact: {
         email: "devasheesh@recallrai.com",
         tel: "+14152120310",
+        tel2: "+919319772072",
         social: [
             {
                 name: "GitHub",
@@ -109,6 +110,57 @@ export const RESUME_DATA = {
             ),
         },
         {
+            company: "MIRA",
+            link: "https://www.trymira.com",
+            location: "San Francisco, California, United States · Remote",
+            badges: [],
+            title: "AI/ML Engineer",
+            logoUrl: "/mira-logo.png",
+            start: "Sep 2025",
+            end: "Nov 2025",
+            description: (
+                <ul className="list-inside list-disc">
+                    <li>
+                        Real-Time Streaming Speech-to-Text Pipeline: Designed
+                        and implemented a low-latency, WebSocket-based streaming
+                        transcription system using Soniox STT models
+                        (stt-rt-preview-v2), with real-time speaker diarization,
+                        silence detection, and multilingual translation. Built
+                        a comprehensive benchmarking framework to evaluate ASR
+                        performance across Soniox, Deepgram, Google, and
+                        AssemblyAI using metrics such as word error rate,
+                        latency, and speaker attribution accuracy. Used
+                        empirical results to guide model selection and system
+                        design decisions.
+                    </li>
+                    <li>
+                        Voice Fingerprinting and Speaker Verification:
+                        Engineered an end-to-end voice biometric pipeline
+                        covering user enrollment, audio signal serialization,
+                        PostgreSQL storage, and real-time speaker identification.
+                        Used SpeechBrain&apos;s ECAPA-TDNN model trained on
+                        VoxCeleb to generate and compare speaker embeddings.
+                        Deployed the system as a standalone FastAPI microservice
+                        on AWS ECS, with parallel cosine-similarity verification
+                        across diarized speaker segments, enabling identification
+                        of the user&apos;s voice against ambient speakers with
+                        under 200 ms inference latency.
+                    </li>
+                    <li>
+                        Long-Term Memory Extraction from Personal Data: Built an
+                        LLM-powered memory extraction pipeline using Gemini 2.0
+                        Flash to process a user&apos;s Gmail corpus and identify
+                        persistent signals such as personality traits, areas of
+                        expertise, preferences, and behavioral patterns.
+                        Structured the extracted information into long-term user
+                        knowledge representations, enabling AI agents to
+                        maintain contextual memory beyond individual
+                        conversations.
+                    </li>
+                </ul>
+            ),
+        },
+        {
             company: "Stapes AI",
             link: "https://github.com/stapesai",
             location: "On-site",
@@ -124,23 +176,29 @@ export const RESUME_DATA = {
                     testers.
                     <ul className="list-inside list-disc">
                         <li>
-                            Developed high-end home automation solution with
-                            Smart TV, Fire Stick, and switch board integrations
+                            Developed a high-end home automation solution with
+                            integrations for Smart TVs, Fire Sticks, and switch
+                            boards, enabling control via voice and mobile app.
+                            Planned to develop a circular custom device like
+                            alexa echo show with a 7-inch display for a
+                            complete home automation experience.
                         </li>
                         <li>
                             Selected for buildspace&apos;s Nights & Weekends S5
-                            program, backed by Y Combinator and a16z
+                            program, a startup accelerator backed by Y
+                            Combinator and a16z.
                         </li>
                         <li>
                             Now whitelabeling the home automation tech to other
-                            players
+                            players. Planning to restart the company with more
+                            focus on AI after aquisition.
                         </li>
                     </ul>
                 </>
             ),
         },
         {
-            company: "Proeffico Solutions Pvt. Ltd.",
+            company: "Proeffico Solutions Private Ltd.",
             link: "https://proeffico.com",
             location: "On-site",
             badges: ["AI/ML", "Computer Vision", "Databases"],
@@ -155,13 +213,15 @@ export const RESUME_DATA = {
                     tools.
                     <ul className="list-inside list-disc">
                         <li>
-                            Developed &ldquo;RDBMS Chat&rdquo;, enabling
-                            non-technical staff to query databases using natural
-                            language
+                            Developed &ldquo;RDBMS Chat&rdquo;, an internal AI
+                            tool enabling non-technical staff to query complex
+                            databases using natural language, enhancing data
+                            accessibility and decision-making processes.
                         </li>
                         <li>
                             Provided IT infrastructure support for servers and
-                            VMs
+                            VMs, ensuring operational stability for various
+                            backend systems.
                         </li>
                     </ul>
                 </>
@@ -179,15 +239,18 @@ export const RESUME_DATA = {
             description: (
                 <>
                     Selected for an exclusive startup program backed by Y
-                    Combinator and a16z.
+                    Combinator and a16z, focused on rapid product development
+                    of Stapes AI.
                     <ul className="list-inside list-disc">
                         <li>
                             Accelerated development of Stapes AI through
-                            community feedback and mentorship
+                            community feedback, mentorship, and rapid
+                            prototyping.
                         </li>
                         <li>
                             Applied skills in Python, Flutter, and embedded
-                            systems (ESP IDF)
+                            systems (ESP IDF) to develop and refine product
+                            offerings.
                         </li>
                     </ul>
                 </>
@@ -208,16 +271,21 @@ export const RESUME_DATA = {
                     initiatives.
                     <ul className="list-inside list-disc">
                         <li>
-                            Conducted comprehensive ML workshops for 80+
-                            students
+                            Conducted comprehensive machine learning workshops
+                            for 80+ students, teaching essential ML and DL
+                            principles and applications, which enhanced
+                            participants&apos; practical skills.
                         </li>
                         <li>
-                            Organized 10+ GeeksforGeeks workshops, enhancing
-                            coding proficiency for 200+ students
+                            Organized and led 10+ GeeksforGeeks (GFG) workshops
+                            across SRM, facilitating doubt clearance sessions
+                            that enhanced coding proficiency for over 200
+                            students.
                         </li>
                         <li>
-                            Led a team of 8 technical staff managing project
-                            timelines
+                            Led a team of 8 technical staff and manage project
+                            timelines for various initiatives, applying
+                            experience in troubleshooting and server management.
                         </li>
                     </ul>
                 </>
@@ -237,12 +305,14 @@ export const RESUME_DATA = {
                     Core member organizing technical events and hackathons.
                     <ul className="list-inside list-disc">
                         <li>
-                            Organized Phoenix Hackathon where I achieved 1st
-                            place
+                            Contributed as a Core Member of GFG, organizing the
+                            Phoenix Hackathon, where I achieved 1st place.
                         </li>
                         <li>
-                            Led Hack-Innovate, attracting 300+ participants with
-                            50+ solutions
+                            Organized and led Hack-Innovate, a two-day hackathon
+                            during the tech fest, attracting over 300
+                            participants and showcasing 50+ innovative
+                            solutions.
                         </li>
                     </ul>
                 </>
@@ -251,24 +321,82 @@ export const RESUME_DATA = {
     ],
     skills: [
         "Python",
+        "C/C++",
+        "JS/TS",
         "PyTorch",
         "Transformers",
+        "Pydantic",
         "FastAPI",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "Azure",
         "Docker",
         "Kubernetes",
-        "Azure",
+        "Portainer",
+        "Traefik",
+        "Harbor",
+        "Terraform",
+        "GitLab CI",
+        "GitHub Actions",
         "PostgreSQL",
         "MongoDB",
+        "Milvus",
+        "Minio",
         "Redis",
-        "LLMs",
-        "Fine-tuning",
-        "ESP32/Arduino",
-        "Raspberry Pi",
+        "Neo4j",
         "Kafka",
+        "Rabbit MQ",
+        "Pytest",
+        "Selenium",
         "Prometheus",
         "Grafana",
+        "Loki",
+        "Promtail",
+        "Alert Manager",
+        "ESP IDF",
+        "PlatformIO",
+        "ESP32/Arduino",
+        "ESP32-CAM",
+        "NodeMCU",
+        "Raspberry Pi",
+        "LLMs",
+        "Fine-tuning",
     ],
     projects: [
+        /*
+        {
+            title: "Universal TV Remote for Mac",
+            techStack: [
+                "Swift",
+                "SwiftUI",
+                "Bonjour",
+                "SSDP",
+                "WebSockets",
+            ],
+            description:
+                "A native macOS menu-bar remote for every smart TV on your network — Fire TV, Android TV, Samsung, LG, and Roku — auto-discovered, no configuration, no cloud. Built with Swift/SwiftUI as a lightweight ~1 MB binary. Supports full remote control, keyboard text input, app shortcuts, and one-time pairing with persistent tokens.",
+            link: {
+                label: "github.com/devasheeshG/universal-tv-remote-macos",
+                href: "https://github.com/devasheeshG/universal-tv-remote-macos",
+            },
+        },
+        {
+            title: "yc-api",
+            techStack: [
+                "Python",
+                "Playwright",
+                "OpenAI",
+                "GitHub Pages",
+            ],
+            description:
+                "A free, open JSON API over the entire Y Combinator Startup Directory — with transcribed application and demo day videos. Built for founders, indie hackers, and researchers to query YC startup data — filtering by batch, industry, hiring status, and more — without writing scrapers from scratch.",
+            link: {
+                label: "github.com/devasheeshG/yc-api",
+                href: "https://github.com/devasheeshG/yc-api",
+            },
+        },
+        */
         {
             title: "Automatic Speech Recognition System",
             techStack: [
@@ -279,7 +407,7 @@ export const RESUME_DATA = {
                 "Whisper",
             ],
             description:
-                "Fine-tuned 2x Whisper models (750M & 1.1B parameters) for Hindi using 10,000 hours of audio. Achieved RTF of 0.3 and reduced inference latency to 200-300ms.",
+                "Fine-tuned 2x Whisper models (750M & 1.1B parameters) for Hindi using 10,000 hours of audio from the Gram Vani Dataset. Achieved Real-Time Factor (RTF) of 0.3 and reduced inference latency to 200-300ms for 30s audio chunks. Implemented data cleaning, Voice Activity Detection (VAD), and increased decoding heads for improved performance. Developed low-latency server using FastAPI and WebSockets, incorporating speculative decoding and Medusa technique.",
             link: {
                 label: "github.com/stapesai/ASR",
                 href: "https://github.com/stapesai/ASR",
@@ -294,7 +422,7 @@ export const RESUME_DATA = {
                 "MongoDB",
             ],
             description:
-                "AI-powered educational platform with interactive mind maps, intelligent content generation, and context-aware video recommendations using Azure OpenAI Vision.",
+                "Engineered backend infrastructure for an AI-powered educational platform that transforms traditional learning through interactive mind maps and intelligent content generation. Implemented AI syllabus extraction using Azure OpenAI Vision to automatically parse educational curricula into structured hierarchical data. Designed and built a context-aware video recommendation system that intelligently curates relevant YouTube educational content. Created a robust notes generation system that produces comprehensive study materials using advanced language models.",
             link: {
                 label: "github.com/devasheeshG/you-education",
                 href: "https://github.com/devasheeshG/you-education",
@@ -361,7 +489,7 @@ export const RESUME_DATA = {
         {
             position: "Course Instructor",
             organization: "GeeksForGeeks",
-            period: "September 2024 - Present",
+            period: "September 2024 - April 2026",
         },
         {
             position: "Assistant Course Instructor",

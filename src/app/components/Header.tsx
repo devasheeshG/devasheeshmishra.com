@@ -71,7 +71,16 @@ function ContactButtons({ contact }: ContactButtonsProps) {
                     <SocialButton
                         href={`tel:${contact.tel}`}
                         icon={PhoneIcon}
-                        label="Phone"
+                        label="Phone (US)"
+                    />
+                </li>
+            )}
+            {contact.tel2 && (
+                <li key="phone2">
+                    <SocialButton
+                        href={`tel:${contact.tel2}`}
+                        icon={PhoneIcon}
+                        label="Phone (India)"
                     />
                 </li>
             )}

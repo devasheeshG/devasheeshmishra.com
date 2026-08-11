@@ -16,6 +16,7 @@ export interface ResumeData {
     contact: {
         email: string;
         tel: string;
+        tel2?: string;
         social: Array<{
             name: string;
             url: string;

@@ -6,7 +6,7 @@ import { generateResumeStructuredData } from "@/lib/structured-data";
 import type { Metadata } from "next";
 import { RESUME_DATA } from "@/data/resume-data";
 import { WorkExperience } from "./components/WorkExperience";
-import { Projects } from "./components/Projects";
+// import { Projects } from "./components/Projects";
 import { Education } from "./components/Education";
 import { Summary } from "./components/Summary";
 import { Skills } from "./components/Skills";
@@ -108,11 +108,11 @@ export default function ResumePage() {
                             </Suspense>
                         </SectionErrorBoundary>
 
-                        <SectionErrorBoundary sectionName="Projects">
+                        {/* <SectionErrorBoundary sectionName="Projects">
                             <Suspense fallback={<SectionSkeleton lines={5} />}>
                                 <Projects projects={RESUME_DATA.projects} />
                             </Suspense>
-                        </SectionErrorBoundary>
+                        </SectionErrorBoundary> */}
 
                         <SectionErrorBoundary sectionName="Certifications">
                             <Suspense fallback={<SectionSkeleton lines={3} />}>
