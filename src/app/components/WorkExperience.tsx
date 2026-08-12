@@ -50,7 +50,7 @@ interface WorkPeriodProps {
  */
 function WorkPeriod({ start, end, location }: WorkPeriodProps) {
     return (
-        <div className="text-sm text-gray-500 space-y-1">
+        <div className="ml-auto shrink-0 space-y-1 text-right text-sm text-gray-500">
             <div className="tabular-nums">
                 {start} - {end ?? "Present"}
             </div>
