@@ -65,7 +65,7 @@ export const RESUME_DATA = {
         {
             company: "Recallr AI Inc.",
             link: "https://recallrai.com",
-            location: "On-site",
+            location: "San Francisco, USA",
             badges: ["AI", "Memory Systems", "Y Combinator"],
             title: "Founder and CEO",
             logoUrl: "/recallrai-logo.png",
@@ -89,7 +89,7 @@ export const RESUME_DATA = {
         {
             company: "Founders, Inc.",
             link: "https://f.inc/canopy",
-            location: "On-site",
+            location: "San Francisco, California, United States",
             badges: ["Startup Program", "San Francisco"],
             title: "Canopy 2026",
             logoUrl: "/founders-inc-logo.jpg",
@@ -100,7 +100,7 @@ export const RESUME_DATA = {
                     Selected for Canopy 2026, a 5-week intensive builder program
                     at Founders, Inc.&apos;s San Francisco campus.
                     <ul className="list-inside list-disc">
-                        <li>One of 100 on-site teams selected globally</li>
+                        <li>One of 100 teams selected globally</li>
                         <li>
                             Built alongside founders across software, hardware,
                             and media verticals
@@ -112,7 +112,7 @@ export const RESUME_DATA = {
         {
             company: "MIRA",
             link: "https://www.trymira.com",
-            location: "San Francisco, California, United States · Remote",
+            location: "San Francisco, California, United States",
             badges: [],
             title: "AI/ML Engineer",
             logoUrl: "/mira-logo.png",
@@ -163,7 +163,7 @@ export const RESUME_DATA = {
         {
             company: "Stapes AI",
             link: "https://github.com/stapesai",
-            location: "On-site",
+            location: "Delhi, India",
             badges: ["AI", "IoT", "Home Automation", "Startup"],
             title: "Founder and CEO",
             logoUrl: "https://avatars.githubusercontent.com/u/99021598?v=4",
@@ -200,7 +200,7 @@ export const RESUME_DATA = {
         {
             company: "Proeffico Solutions Private Ltd.",
             link: "https://proeffico.com",
-            location: "On-site",
+            location: "Noida, India",
             badges: ["AI/ML", "Computer Vision", "Databases"],
             title: "AI/ML Engineer Intern",
             logoUrl:
@@ -230,7 +230,7 @@ export const RESUME_DATA = {
         {
             company: "Buildspace",
             link: "https://buildspace.so",
-            location: "Remote",
+            location: "San Francisco, USA",
             badges: ["Startup Accelerator", "Product Development"],
             title: "Builder, Nights & Weekends S5",
             logoUrl: "https://avatars.githubusercontent.com/u/65048157?v=4",
@@ -259,7 +259,7 @@ export const RESUME_DATA = {
         {
             company: "GeeksForGeeks",
             link: "https://geeksforgeeks.org",
-            location: "On-site",
+            location: "New Delhi, India",
             badges: ["Education", "ML Workshops"],
             title: "Technical Lead",
             logoUrl: "https://media.geeksforgeeks.org/gfg-gg-logo.svg",
@@ -294,7 +294,7 @@ export const RESUME_DATA = {
         {
             company: "GeeksForGeeks",
             link: "https://geeksforgeeks.org",
-            location: "On-site",
+            location: "New Delhi, India",
             badges: ["Hackathons", "Community Building"],
             title: "Core Technical Team Member",
             logoUrl: "https://media.geeksforgeeks.org/gfg-gg-logo.svg",

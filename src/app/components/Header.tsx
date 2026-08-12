@@ -1,26 +1,16 @@
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { RESUME_DATA } from "@/data/resume-data";
 
 interface LocationLinkProps {
     location: typeof RESUME_DATA.location;
-    locationLink: typeof RESUME_DATA.locationLink;
 }
 
-function LocationLink({ location, locationLink }: LocationLinkProps) {
+function LocationLink({ location }: LocationLinkProps) {
     return (
         <p className="max-w-md items-center text-pretty font-mono text-xs text-foreground">
-            <a
-                className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
-                href={locationLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Location: ${location}`}
-            >
-                <GlobeIcon className="size-3" aria-hidden="true" />
-                {location}
-            </a>
+            {location}
         </p>
     );
 }
@@ -111,10 +101,7 @@ export function Header() {
                     {RESUME_DATA.about}
                 </p>
 
-                <LocationLink
-                    location={RESUME_DATA.location}
-                    locationLink={RESUME_DATA.locationLink}
-                />
+                <LocationLink location={RESUME_DATA.location} />
 
                 <ContactButtons contact={RESUME_DATA.contact} />
             </div>

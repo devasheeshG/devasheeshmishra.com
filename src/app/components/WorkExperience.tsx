@@ -56,7 +56,7 @@ function WorkPeriod({ start, end, location }: WorkPeriodProps) {
             </div>
             {location && (
                 <div className="text-xs font-medium text-gray-600">
-                    📍 {location}
+                    {location}
                 </div>
             )}
         </div>
