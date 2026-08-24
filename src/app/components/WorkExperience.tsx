@@ -1,9 +1,9 @@
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardHeader, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
 import type { RESUME_DATA } from "@/data/resume-data";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 
 type WorkExperience = (typeof RESUME_DATA)["work"][number];
 type WorkBadges = readonly string[];
@@ -134,7 +134,6 @@ interface WorkExperienceItemProps {
 function WorkExperienceItem({ work }: WorkExperienceItemProps) {
     const { company, link, badges, title, start, end, description, logoUrl } =
         work;
-    // Extract location from work object, with fallback to undefined if not present
     const location = "location" in work ? work.location : undefined;
 
     return (

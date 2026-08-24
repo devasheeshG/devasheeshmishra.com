@@ -1,6 +1,6 @@
 import { MailIcon, PhoneIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 
 interface LocationLinkProps {

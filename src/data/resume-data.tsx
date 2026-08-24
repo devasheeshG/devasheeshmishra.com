@@ -1,7 +1,7 @@
 import {
     GitHubIcon,
-    LinkedInIcon,
     HuggingFaceIcon,
+    LinkedInIcon,
     WhatsAppIcon,
     XIcon,
 } from "@/components/icons";
@@ -66,7 +66,7 @@ export const RESUME_DATA = {
             company: "Recallr AI Inc.",
             link: "https://recallrai.com",
             location: "San Francisco, USA",
-            badges: ["AI", "Memory Systems", "Y Combinator"],
+            badges: ["AI", "Enterprise Memory", "Private Capital"],
             title: "Founder and CEO",
             logoUrl: "/recallrai-logo.png",
             start: "2025",
@@ -93,20 +93,22 @@ export const RESUME_DATA = {
             badges: ["Startup Program", "San Francisco"],
             title: "Canopy 2026",
             logoUrl: "/founders-inc-logo.jpg",
-            start: "2026",
-            end: "2026",
+            start: "Mar 2026",
+            end: "May 2026",
             description: (
-                <>
-                    Selected for Canopy 2026, a 5-week intensive builder program
-                    at Founders, Inc.&apos;s San Francisco campus.
-                    <ul className="list-inside list-disc">
-                        <li>One of 100 teams selected globally</li>
-                        <li>
-                            Built alongside founders across software, hardware,
-                            and media verticals
-                        </li>
-                    </ul>
-                </>
+                <ul className="list-inside list-disc">
+                    <li>
+                        Selected as one of 100 teams globally for Canopy 2026, a
+                        five-week builder residency at Founders, Inc.&apos;s San
+                        Francisco campus.
+                    </li>
+                    <li>
+                        Built and commercialized Recallr&apos;s memory layer for
+                        conversational AI systems during the program, acquiring
+                        multiple clients and generating approximately $15,000 in
+                        revenue.
+                    </li>
+                </ul>
             ),
         },
         {
@@ -125,8 +127,8 @@ export const RESUME_DATA = {
                         and implemented a low-latency, WebSocket-based streaming
                         transcription system using Soniox STT models
                         (stt-rt-preview-v2), with real-time speaker diarization,
-                        silence detection, and multilingual translation. Built
-                        a comprehensive benchmarking framework to evaluate ASR
+                        silence detection, and multilingual translation. Built a
+                        comprehensive benchmarking framework to evaluate ASR
                         performance across Soniox, Deepgram, Google, and
                         AssemblyAI using metrics such as word error rate,
                         latency, and speaker attribution accuracy. Used
@@ -137,14 +139,14 @@ export const RESUME_DATA = {
                         Voice Fingerprinting and Speaker Verification:
                         Engineered an end-to-end voice biometric pipeline
                         covering user enrollment, audio signal serialization,
-                        PostgreSQL storage, and real-time speaker identification.
-                        Used SpeechBrain&apos;s ECAPA-TDNN model trained on
-                        VoxCeleb to generate and compare speaker embeddings.
-                        Deployed the system as a standalone FastAPI microservice
-                        on AWS ECS, with parallel cosine-similarity verification
-                        across diarized speaker segments, enabling identification
-                        of the user&apos;s voice against ambient speakers with
-                        under 200 ms inference latency.
+                        PostgreSQL storage, and real-time speaker
+                        identification. Used SpeechBrain&apos;s ECAPA-TDNN model
+                        trained on VoxCeleb to generate and compare speaker
+                        embeddings. Deployed the system as a standalone FastAPI
+                        microservice on AWS ECS, with parallel cosine-similarity
+                        verification across diarized speaker segments, enabling
+                        identification of the user&apos;s voice against ambient
+                        speakers with under 200 ms inference latency.
                     </li>
                     <li>
                         Long-Term Memory Extraction from Personal Data: Built an
@@ -180,8 +182,8 @@ export const RESUME_DATA = {
                             integrations for Smart TVs, Fire Sticks, and switch
                             boards, enabling control via voice and mobile app.
                             Planned to develop a circular custom device like
-                            alexa echo show with a 7-inch display for a
-                            complete home automation experience.
+                            alexa echo show with a 7-inch display for a complete
+                            home automation experience.
                         </li>
                         <li>
                             Selected for buildspace&apos;s Nights & Weekends S5
@@ -239,8 +241,8 @@ export const RESUME_DATA = {
             description: (
                 <>
                     Selected for an exclusive startup program backed by Y
-                    Combinator and a16z, focused on rapid product development
-                    of Stapes AI.
+                    Combinator and a16z, focused on rapid product development of
+                    Stapes AI.
                     <ul className="list-inside list-disc">
                         <li>
                             Accelerated development of Stapes AI through
