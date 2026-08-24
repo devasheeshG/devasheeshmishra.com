@@ -12,12 +12,14 @@ export const RESUME_DATA = {
     location: "San Francisco, USA",
     locationLink: "https://www.google.com/maps/place/San+Francisco",
     personalWebsiteUrl: "https://devasheeshmishra.com",
-    about: "Founder and CEO of Recallr AI, building long term memory layer for conversational AI agents.",
+    about: "Founder and CEO of Recallr AI, building the intelligence and memory layer for private capital.",
     summary: (
         <>
-            Founder and CEO of Recallr AI, building long-term memory for
-            conversational AI agents. Was selected for Y Combinator&apos;s first
-            ever AI Startup School among 2,000 top CS students globally.
+            Founder and CEO of Recallr AI, the intelligence and memory layer for
+            private capital. Previously built Recallr as a long-term memory
+            layer for conversational AI systems. Was selected for Y
+            Combinator&apos;s first ever AI Startup School among 2,000 top CS
+            students globally.
         </>
     ),
     avatarUrl: "https://avatars.githubusercontent.com/u/72092910?v=4",
@@ -72,18 +74,43 @@ export const RESUME_DATA = {
             start: "2025",
             end: null,
             description: (
-                <>
-                    Building Long term memory for conversational AI agents,
-                    enabling them to remember and recall information across
-                    sessions.
-                    <ul className="list-inside list-disc">
-                        <li>
-                            Got selected for an interview at Y Combinator for
-                            the Summer 2025 batch
-                        </li>
-                        <li>Currently raising a pre-seed round of funding</li>
-                    </ul>
-                </>
+                <ul className="list-inside list-disc">
+                    <li>
+                        Built Recallr, a persistent, queryable long-term memory
+                        layer for conversational AI systems that retains facts,
+                        preferences, relationships, and decisions across
+                        multiple conversations while preserving the source of
+                        each memory. Architected its ingestion pipeline,
+                        evolving knowledge graph, semantic retrieval, temporal
+                        reasoning, knowledge-update handling, and configurable
+                        merge and conflict-resolution rules.
+                    </li>
+                    <li>
+                        Evaluated Recallr on the{" "}
+                        <a
+                            href="https://github.com/recallrai/benchmarks"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline"
+                        >
+                            LongMemEval benchmark
+                        </a>{" "}
+                        achieving 97.5% overall accuracy, including 97.0%
+                        temporal-reasoning accuracy and 97.4% knowledge-update
+                        accuracy. Delivered P95 latency of 408 ms for
+                        Low-Latency recall, 1.575 seconds for Balanced recall,
+                        and 8.619 seconds for Agentic recall.
+                    </li>
+                    <li>
+                        Evolved Recallr into the intelligence and memory layer
+                        for private capital, transforming fragmented deal memos,
+                        data rooms, diligence, meeting transcripts, partner
+                        notes, filings, returns, and investment-committee
+                        history into a continuously updated, queryable decision
+                        graph that preserves how a firm&apos;s investment
+                        judgment evolves over time.
+                    </li>
+                </ul>
             ),
         },
         {
@@ -318,6 +345,136 @@ export const RESUME_DATA = {
                         </li>
                     </ul>
                 </>
+            ),
+        },
+    ],
+    research: [
+        {
+            title: "A Name Is Not a Memory: Relational Binding in Continual Parametric Memory for Conversational Agents",
+            link: null,
+            status: "In Progress",
+            start: "Aug 2026",
+            end: null,
+            description: (
+                <ul className="list-inside list-disc space-y-1">
+                    <li>
+                        <strong>Goal:</strong> Develop{" "}
+                        <strong>retrieval-free</strong> long-term memory for
+                        conversational agents by encoding user-specific
+                        knowledge in persistent LoRA adapters on a frozen
+                        language model; evaluate how parametric memory compares
+                        with retrieval-based systems such as Recallr AI on
+                        retention, identity binding, continual updates, and
+                        cross-user interference; and explore a scalable
+                        multi-LoRA architecture inspired by Mixture-of-Experts
+                        routing.
+                    </li>
+                </ul>
+            ),
+        },
+        {
+            title: "Hallucination Dynamics in Small Language Models: A Large-Scale Empirical Study",
+            link: null,
+            status: "In Progress",
+            start: "Jan 2026",
+            end: null,
+            description: (
+                <ul className="list-inside list-disc space-y-1">
+                    <li>
+                        <strong>Goal:</strong> Determine how sampling
+                        temperature affects hallucination behavior in small
+                        language models across model scales, quantization
+                        levels, and factual domains.
+                    </li>
+                    <li>
+                        <strong>Approach:</strong> Collected over 10 million
+                        data samples from SLMs including
+                        Qwen2.5-0.5B/1.5B/3B/7B, Qwen3-1.7B/4B/8B,
+                        Llama-3.2-1B/3B, Gemma-3-4B, and Mistral-7B. Tested T ∈
+                        [0,1] at ΔT=0.1 on{" "}
+                        <a
+                            href="https://arxiv.org/abs/2305.11747"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline"
+                        >
+                            HaluEval-QA
+                        </a>{" "}
+                        and{" "}
+                        <a
+                            href="https://huggingface.co/datasets/pminervini/true-false"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline"
+                        >
+                            True/False
+                        </a>{" "}
+                        across politics, geography, history, science, health,
+                        cities, companies, facts, and other domains.
+                    </li>
+                    <li>
+                        <strong>Result:</strong> Identified a non-monotonic
+                        scale-temperature relationship: sub-1.5B SLMs often
+                        collapsed into one-class prediction priors at low
+                        temperature, so added sampling entropy could reduce
+                        hallucination error by weakening systematic bias; near
+                        the 1.5B competence boundary, higher temperature instead
+                        amplified factual instability, especially under 4-bit
+                        quantization, while many 3B–8B models remained
+                        comparatively stable. Effects varied by topic and were
+                        concentrated on marginal knowledge, showing that
+                        hallucination risk depends on the interaction of scale,
+                        calibration, quantization, and domain rather than
+                        temperature alone.
+                    </li>
+                </ul>
+            ),
+        },
+        {
+            title: "Recallr AI: Scalable Architecture for Dynamic Long-Term Memory in Conversational AI Agents",
+            link: "https://github.com/recallrai/white-paper",
+            status: "In Progress",
+            start: "Apr 2025",
+            end: null,
+            description: (
+                <ul className="list-inside list-disc space-y-1">
+                    <li>
+                        <strong>Goal:</strong> Build scalable long-term memory
+                        for conversational AI that preserves evolving user state
+                        across sessions without adding latency to real-time
+                        responses.
+                    </li>
+                    <li>
+                        <strong>Approach:</strong> Built a versioned knowledge
+                        graph through decoupled asynchronous curation and
+                        synchronous retrieval. Its decision logic classifies new
+                        evidence as redundant, novel, additive, temporally
+                        superseding, expired, or directly conflicting; dual
+                        timestamps separate event time from discussion time,
+                        immutable version chains preserve state evolution, and a
+                        Git-inspired human-in-the-loop protocol resolves
+                        contradictions. Auto-Recall routes queries across
+                        Low-Latency, Balanced, and Agentic retrieval with
+                        adaptive graph traversal.
+                    </li>
+                    <li>
+                        <strong>Result:</strong> Benchmarked Recallr on the{" "}
+                        <a
+                            href="https://arxiv.org/abs/2410.10813"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline"
+                        >
+                            LongMemEval
+                        </a>{" "}
+                        Oracle tier. Agentic Recall achieved 98.9% accuracy—32.7
+                        percentage points above the nearest competitor—with 100%
+                        on knowledge updates, 99.2% on temporal reasoning, and
+                        98.5% on multi-session questions; Low-Latency Recall
+                        retained 92.6% accuracy at 396 ms P95, approximately
+                        4.5× faster at P95 than the fastest competing system.
+                    </li>
+                </ul>
             ),
         },
     ],

@@ -35,6 +35,7 @@ export function ThemeToggle() {
                 window.location.protocol === "https:"
                     ? "; Secure"
                     : "";
+            // biome-ignore lint/suspicious/noDocumentCookie: Cookie Store API support is not yet consistent across target browsers.
             document.cookie = `theme=${dark ? "dark" : "light"}; Expires=${expires}; Path=/; SameSite=Lax${secure}`;
         } catch {
             // Ignore cookie/localStorage errors

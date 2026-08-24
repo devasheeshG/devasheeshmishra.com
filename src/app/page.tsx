@@ -1,20 +1,21 @@
-import { CommandMenu } from "@/components/command-menu";
+import type { Metadata } from "next";
 import { Suspense } from "react";
+import { CommandMenu } from "@/components/command-menu";
 import { SectionErrorBoundary } from "@/components/section-error-boundary";
 import { SectionSkeleton } from "@/components/section-skeleton";
-import { generateResumeStructuredData } from "@/lib/structured-data";
-import type { Metadata } from "next";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { RESUME_DATA } from "@/data/resume-data";
-import { WorkExperience } from "./components/WorkExperience";
-// import { Projects } from "./components/Projects";
-import { Education } from "./components/Education";
-import { Summary } from "./components/Summary";
-import { Skills } from "./components/Skills";
-import { Header } from "./components/Header";
+import { generateResumeStructuredData } from "@/lib/structured-data";
 import { Achievements } from "./components/Achievements";
 import { Certifications } from "./components/Certifications";
+// import { Projects } from "./components/Projects";
+import { Education } from "./components/Education";
 import { Extracurricular } from "./components/Extracurricular";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { Header } from "./components/Header";
+import { Research } from "./components/Research";
+import { Skills } from "./components/Skills";
+import { Summary } from "./components/Summary";
+import { WorkExperience } from "./components/WorkExperience";
 
 export const metadata: Metadata = {
     title: `${RESUME_DATA.name} - Resume`,
@@ -93,6 +94,12 @@ export default function ResumePage() {
                         <SectionErrorBoundary sectionName="Work Experience">
                             <Suspense fallback={<SectionSkeleton lines={6} />}>
                                 <WorkExperience work={RESUME_DATA.work} />
+                            </Suspense>
+                        </SectionErrorBoundary>
+
+                        <SectionErrorBoundary sectionName="Research">
+                            <Suspense fallback={<SectionSkeleton lines={8} />}>
+                                <Research research={RESUME_DATA.research} />
                             </Suspense>
                         </SectionErrorBoundary>
 

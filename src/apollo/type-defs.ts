@@ -61,6 +61,27 @@ export class Work {
 }
 
 @ObjectType()
+export class Research {
+    @Field(() => String)
+    title: string;
+
+    @Field(() => String, { nullable: true })
+    link?: string;
+
+    @Field(() => String)
+    status: string;
+
+    @Field(() => String)
+    start: string;
+
+    @Field(() => String)
+    end: string;
+
+    @Field(() => String)
+    description: string;
+}
+
+@ObjectType()
 export class Link {
     @Field(() => String)
     label: string;
@@ -118,6 +139,9 @@ export class Me {
 
     @Field(() => [Work])
     work: Work[];
+
+    @Field(() => [Research])
+    research: Research[];
 
     @Field(() => [String])
     skills: string[];

@@ -8,7 +8,7 @@ import { buildSchema } from "type-graphql";
 import { MeResolver } from "../../apollo/resolvers";
 
 let apolloServer: ApolloServer;
-let handler: any; // TODO: Replace 'any' with appropriate type
+let handler: (request: NextRequest) => Promise<Response>;
 
 try {
     const schema = await buildSchema({
