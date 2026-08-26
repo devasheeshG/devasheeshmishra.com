@@ -47,7 +47,10 @@ export interface ResumeData {
         end: string | null;
         description: string | React.ReactNode;
     }>;
-    skills: string[];
+    skills: Array<{
+        category: string;
+        skills: string[];
+    }>;
     projects: Array<{
         title: string;
         techStack: string[];
@@ -173,7 +176,7 @@ export function resumeDataToGraphQL(data: ResumeData): GraphQLMe {
             end: entry.end || "Present",
             description: reactToString(entry.description),
         })),
-        skills: data.skills,
+        skills: data.skills.flatMap((section) => section.skills),
         projects: data.projects.map((project) => ({
             title: project.title,
             techStack: project.techStack,

@@ -12,6 +12,7 @@ import { Certifications } from "./components/Certifications";
 import { Education } from "./components/Education";
 import { Extracurricular } from "./components/Extracurricular";
 import { Header } from "./components/Header";
+import { Interest } from "./components/Interest";
 import { Research } from "./components/Research";
 import { Skills } from "./components/Skills";
 import { Summary } from "./components/Summary";
@@ -91,6 +92,12 @@ export default function ResumePage() {
                             </Suspense>
                         </SectionErrorBoundary>
 
+                        <SectionErrorBoundary sectionName="Skills">
+                            <Suspense fallback={<SectionSkeleton lines={2} />}>
+                                <Skills skills={RESUME_DATA.skills} />
+                            </Suspense>
+                        </SectionErrorBoundary>
+
                         <SectionErrorBoundary sectionName="Work Experience">
                             <Suspense fallback={<SectionSkeleton lines={6} />}>
                                 <WorkExperience work={RESUME_DATA.work} />
@@ -103,36 +110,30 @@ export default function ResumePage() {
                             </Suspense>
                         </SectionErrorBoundary>
 
-                        <SectionErrorBoundary sectionName="Education">
-                            <Suspense fallback={<SectionSkeleton lines={3} />}>
-                                <Education education={RESUME_DATA.education} />
-                            </Suspense>
-                        </SectionErrorBoundary>
-
-                        <SectionErrorBoundary sectionName="Skills">
-                            <Suspense fallback={<SectionSkeleton lines={2} />}>
-                                <Skills skills={RESUME_DATA.skills} />
-                            </Suspense>
-                        </SectionErrorBoundary>
-
                         {/* <SectionErrorBoundary sectionName="Projects">
                             <Suspense fallback={<SectionSkeleton lines={5} />}>
                                 <Projects projects={RESUME_DATA.projects} />
                             </Suspense>
                         </SectionErrorBoundary> */}
 
-                        <SectionErrorBoundary sectionName="Certifications">
-                            <Suspense fallback={<SectionSkeleton lines={3} />}>
-                                <Certifications
-                                    certifications={RESUME_DATA.certifications}
-                                />
-                            </Suspense>
-                        </SectionErrorBoundary>
-
                         <SectionErrorBoundary sectionName="Achievements">
                             <Suspense fallback={<SectionSkeleton lines={3} />}>
                                 <Achievements
                                     achievements={RESUME_DATA.achievements}
+                                />
+                            </Suspense>
+                        </SectionErrorBoundary>
+
+                        <SectionErrorBoundary sectionName="Interest">
+                            <Suspense fallback={<SectionSkeleton lines={8} />}>
+                                <Interest interest={RESUME_DATA.interest} />
+                            </Suspense>
+                        </SectionErrorBoundary>
+
+                        <SectionErrorBoundary sectionName="Certifications">
+                            <Suspense fallback={<SectionSkeleton lines={3} />}>
+                                <Certifications
+                                    certifications={RESUME_DATA.certifications}
                                 />
                             </Suspense>
                         </SectionErrorBoundary>
@@ -144,6 +145,12 @@ export default function ResumePage() {
                                         RESUME_DATA.extracurricular
                                     }
                                 />
+                            </Suspense>
+                        </SectionErrorBoundary>
+
+                        <SectionErrorBoundary sectionName="Education">
+                            <Suspense fallback={<SectionSkeleton lines={3} />}>
+                                <Education education={RESUME_DATA.education} />
                             </Suspense>
                         </SectionErrorBoundary>
                     </div>

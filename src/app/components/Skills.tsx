@@ -2,7 +2,12 @@ import { Badge } from "@/components/ui/badge";
 import { Section } from "@/components/ui/section";
 import { cn } from "@/lib/utils";
 
-type Skills = readonly string[];
+type SkillSection = {
+    category: string;
+    skills: readonly string[];
+};
+
+type Skills = readonly SkillSection[];
 
 interface SkillsListProps {
     skills: Skills;
@@ -14,21 +19,30 @@ interface SkillsListProps {
  */
 function SkillsList({ skills, className }: SkillsListProps) {
     return (
-        <ul
-            className={cn("flex list-none flex-wrap gap-1 p-0", className)}
-            aria-label="List of skills"
-        >
-            {skills.map((skill) => (
-                <li key={skill}>
-                    <Badge
-                        className="print:text-[10px]"
-                        aria-label={`Skill: ${skill}`}
-                    >
-                        {skill}
-                    </Badge>
-                </li>
+        <div className={cn("space-y-3", className)}>
+            {skills.map(({ category, skills: categorySkills }) => (
+                <div
+                    className="grid gap-1 sm:grid-cols-[11rem_1fr] sm:items-start"
+                    key={category}
+                >
+                    <h3 className="text-sm font-semibold text-muted-foreground">
+                        {category}
+                    </h3>
+                    <ul className="flex list-none flex-wrap gap-1 p-0">
+                        {categorySkills.map((skill) => (
+                            <li key={skill}>
+                                <Badge
+                                    className="print:text-[10px]"
+                                    aria-label={`Skill: ${skill}`}
+                                >
+                                    {skill}
+                                </Badge>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             ))}
-        </ul>
+        </div>
     );
 }
 
@@ -47,7 +61,7 @@ export function Skills({ skills, className }: SkillsProps) {
             <h2 className="text-xl font-bold" id="skills-section">
                 Skills
             </h2>
-            <SkillsList skills={skills} aria-labelledby="skills-section" />
+            <SkillsList skills={skills} />
         </Section>
     );
 }

@@ -67,11 +67,11 @@ export const RESUME_DATA = {
         {
             company: "Recallr AI Inc.",
             link: "https://recallrai.com",
-            location: "San Francisco, USA",
+            location: "San Francisco, USA — On-site",
             badges: ["AI", "Enterprise Memory", "Private Capital"],
-            title: "Founder and CEO",
+            title: "Founder and CTO",
             logoUrl: "/recallrai-logo.png",
-            start: "2025",
+            start: "January 2025",
             end: null,
             description: (
                 <ul className="list-inside list-disc">
@@ -94,8 +94,8 @@ export const RESUME_DATA = {
                             className="underline"
                         >
                             LongMemEval benchmark
-                        </a>{" "}
-                        achieving 97.5% overall accuracy, including 97.0%
+                        </a>
+                        , achieving 97.5% overall accuracy, including 97.0%
                         temporal-reasoning accuracy and 97.4% knowledge-update
                         accuracy. Delivered P95 latency of 408 ms for
                         Low-Latency recall, 1.575 seconds for Balanced recall,
@@ -116,18 +116,18 @@ export const RESUME_DATA = {
         {
             company: "Founders, Inc.",
             link: "https://f.inc/canopy",
-            location: "San Francisco, California, United States",
+            location: "San Francisco, California, United States — On-site",
             badges: ["Startup Program", "San Francisco"],
             title: "Canopy 2026",
             logoUrl: "/founders-inc-logo.jpg",
-            start: "Mar 2026",
+            start: "March 2026",
             end: "May 2026",
             description: (
                 <ul className="list-inside list-disc">
                     <li>
                         Selected as one of 100 teams globally for Canopy 2026, a
-                        five-week builder residency at Founders, Inc.&apos;s San
-                        Francisco campus.
+                        five-week on-site builder residency at Founders,
+                        Inc.&apos;s San Francisco campus.
                     </li>
                     <li>
                         Built and commercialized Recallr&apos;s memory layer for
@@ -141,12 +141,12 @@ export const RESUME_DATA = {
         {
             company: "MIRA",
             link: "https://www.trymira.com",
-            location: "San Francisco, California, United States",
+            location: "San Francisco, California, United States — Remote",
             badges: [],
             title: "AI/ML Engineer",
             logoUrl: "/mira-logo.png",
-            start: "Sep 2025",
-            end: "Nov 2025",
+            start: "September 2025",
+            end: "November 2025",
             description: (
                 <ul className="list-inside list-disc">
                     <li>
@@ -157,34 +157,32 @@ export const RESUME_DATA = {
                         silence detection, and multilingual translation. Built a
                         comprehensive benchmarking framework to evaluate ASR
                         performance across Soniox, Deepgram, Google, and
-                        AssemblyAI using metrics such as word error rate,
-                        latency, and speaker attribution accuracy. Used
-                        empirical results to guide model selection and system
-                        design decisions.
+                        AssemblyAI using word error rate, latency, and
+                        speaker-attribution accuracy, then used the results to
+                        guide model selection and system design.
                     </li>
                     <li>
                         Voice Fingerprinting and Speaker Verification:
-                        Engineered an end-to-end voice biometric pipeline
-                        covering user enrollment, audio signal serialization,
+                        Engineered an end-to-end voice-biometric pipeline
+                        covering user enrollment, audio serialization,
                         PostgreSQL storage, and real-time speaker
                         identification. Used SpeechBrain&apos;s ECAPA-TDNN model
                         trained on VoxCeleb to generate and compare speaker
                         embeddings. Deployed the system as a standalone FastAPI
                         microservice on AWS ECS, with parallel cosine-similarity
-                        verification across diarized speaker segments, enabling
-                        identification of the user&apos;s voice against ambient
-                        speakers with under 200 ms inference latency.
+                        verification across diarized speaker segments,
+                        identifying the enrolled user among ambient speakers
+                        with under 200 ms inference latency.
                     </li>
                     <li>
                         Long-Term Memory Extraction from Personal Data: Built an
-                        LLM-powered memory extraction pipeline using Gemini 2.0
+                        LLM-powered memory-extraction pipeline using Gemini 2.0
                         Flash to process a user&apos;s Gmail corpus and identify
-                        persistent signals such as personality traits, areas of
-                        expertise, preferences, and behavioral patterns.
-                        Structured the extracted information into long-term user
-                        knowledge representations, enabling AI agents to
-                        maintain contextual memory beyond individual
-                        conversations.
+                        durable signals such as personality traits, expertise,
+                        preferences, and behavioral patterns. Structured the
+                        extracted information into long-term user knowledge
+                        representations, enabling AI agents to maintain context
+                        across conversations.
                     </li>
                 </ul>
             ),
@@ -192,159 +190,145 @@ export const RESUME_DATA = {
         {
             company: "Stapes AI",
             link: "https://github.com/stapesai",
-            location: "Delhi, India",
+            location: "Delhi, India — On-site",
             badges: ["AI", "IoT", "Home Automation", "Startup"],
             title: "Founder and CEO",
             logoUrl: "https://avatars.githubusercontent.com/u/99021598?v=4",
-            start: "2024",
-            end: "2025",
+            start: "May 2024",
+            end: "January 2025",
             description: (
-                <>
-                    Founded an AI Home Automation company, successfully shipping
-                    v1.0 of the product in a month and acquired 50+ beta
-                    testers.
-                    <ul className="list-inside list-disc">
-                        <li>
-                            Developed a high-end home automation solution with
-                            integrations for Smart TVs, Fire Sticks, and switch
-                            boards, enabling control via voice and mobile app.
-                            Planned to develop a circular custom device like
-                            alexa echo show with a 7-inch display for a complete
-                            home automation experience.
-                        </li>
-                        <li>
-                            Selected for buildspace&apos;s Nights & Weekends S5
-                            program, a startup accelerator backed by Y
-                            Combinator and a16z.
-                        </li>
-                        <li>
-                            Now whitelabeling the home automation tech to other
-                            players. Planning to restart the company with more
-                            focus on AI after aquisition.
-                        </li>
-                    </ul>
-                </>
+                <ul className="list-inside list-disc">
+                    <li>
+                        Founded an AI home-automation company, shipped v1.0
+                        within one month, onboarded 50+ beta testers, and led
+                        the company through acquisition.
+                    </li>
+                    <li>
+                        Developed a home-automation platform integrating smart
+                        TVs, Fire TV devices, and switchboards, with control
+                        through voice and mobile apps; designed custom PCBs and
+                        ESP32 firmware for the device stack.
+                    </li>
+                    <li>
+                        Admitted to Buildspace&apos;s Nights & Weekends S5
+                        program, backed by Y Combinator and a16z; subsequently
+                        white-labeled the home-automation technology for other
+                        operators.
+                    </li>
+                </ul>
             ),
         },
         {
             company: "Proeffico Solutions Private Ltd.",
             link: "https://proeffico.com",
-            location: "Noida, India",
+            location: "Noida, India — On-site",
             badges: ["AI/ML", "Computer Vision", "Databases"],
             title: "AI/ML Engineer Intern",
             logoUrl:
                 "https://proeffico.com/wp-content/uploads/2023/09/Copy-of-proeffico-logo-1.png",
-            start: "2024",
-            end: "2024",
+            start: "August 2024",
+            end: "September 2024",
             description: (
-                <>
-                    Developed AI solutions for enterprise clients and internal
-                    tools.
-                    <ul className="list-inside list-disc">
-                        <li>
-                            Developed &ldquo;RDBMS Chat&rdquo;, an internal AI
-                            tool enabling non-technical staff to query complex
-                            databases using natural language, enhancing data
-                            accessibility and decision-making processes.
-                        </li>
-                        <li>
-                            Provided IT infrastructure support for servers and
-                            VMs, ensuring operational stability for various
-                            backend systems.
-                        </li>
-                    </ul>
-                </>
+                <ul className="list-inside list-disc">
+                    <li>
+                        Engineered and deployed a real-time
+                        shoplifting-detection system across retail locations,
+                        validating it with live on-site video feeds for a global
+                        client.
+                    </li>
+                    <li>
+                        Developed RDBMS Chat, an internal conversational AI tool
+                        that enabled non-technical staff to query complex
+                        relational databases in natural language, improving
+                        access to operational data and insights.
+                    </li>
+                    <li>
+                        Supported internal servers and virtual machines, helping
+                        maintain operational stability for backend systems
+                        across multiple projects.
+                    </li>
+                </ul>
             ),
         },
         {
             company: "Buildspace",
             link: "https://buildspace.so",
-            location: "San Francisco, USA",
-            badges: ["Startup Accelerator", "Product Development"],
+            location: "San Francisco, USA — Remote",
+            badges: ["Startup Program", "Product Development"],
             title: "Builder, Nights & Weekends S5",
             logoUrl: "https://avatars.githubusercontent.com/u/65048157?v=4",
-            start: "2024",
-            end: "2024",
+            start: "June 2024",
+            end: "August 2024",
             description: (
-                <>
-                    Selected for an exclusive startup program backed by Y
-                    Combinator and a16z, focused on rapid product development of
-                    Stapes AI.
-                    <ul className="list-inside list-disc">
-                        <li>
-                            Accelerated development of Stapes AI through
-                            community feedback, mentorship, and rapid
-                            prototyping.
-                        </li>
-                        <li>
-                            Applied skills in Python, Flutter, and embedded
-                            systems (ESP IDF) to develop and refine product
-                            offerings.
-                        </li>
-                    </ul>
-                </>
+                <ul className="list-inside list-disc">
+                    <li>
+                        Joined a startup program backed by Y Combinator and
+                        a16z, focused on rapid product development for Stapes
+                        AI.
+                    </li>
+                    <li>
+                        Accelerated Stapes AI through community feedback,
+                        mentorship, rapid prototyping, and successive product
+                        iterations.
+                    </li>
+                    <li>
+                        Applied Python, Flutter, and embedded-systems
+                        development with ESP-IDF to refine the product&apos;s
+                        software and hardware stack.
+                    </li>
+                </ul>
             ),
         },
         {
-            company: "GeeksForGeeks",
+            company: "GeeksforGeeks",
             link: "https://geeksforgeeks.org",
-            location: "New Delhi, India",
+            location: "New Delhi, India — On-site",
             badges: ["Education", "ML Workshops"],
             title: "Technical Lead",
             logoUrl: "https://media.geeksforgeeks.org/gfg-gg-logo.svg",
-            start: "2024",
-            end: "2025",
+            start: "April 2024",
+            end: "February 2026",
             description: (
-                <>
-                    Leading technical education and community building
-                    initiatives.
-                    <ul className="list-inside list-disc">
-                        <li>
-                            Conducted comprehensive machine learning workshops
-                            for 80+ students, teaching essential ML and DL
-                            principles and applications, which enhanced
-                            participants&apos; practical skills.
-                        </li>
-                        <li>
-                            Organized and led 10+ GeeksforGeeks (GFG) workshops
-                            across SRM, facilitating doubt clearance sessions
-                            that enhanced coding proficiency for over 200
-                            students.
-                        </li>
-                        <li>
-                            Led a team of 8 technical staff and manage project
-                            timelines for various initiatives, applying
-                            experience in troubleshooting and server management.
-                        </li>
-                    </ul>
-                </>
+                <ul className="list-inside list-disc">
+                    <li>
+                        Conducted hands-on machine-learning and deep-learning
+                        workshops for 80+ students, teaching core principles and
+                        practical applications.
+                    </li>
+                    <li>
+                        Organized and led 10+ GeeksforGeeks workshops across
+                        SRM, including coding-support sessions that reached more
+                        than 200 students.
+                    </li>
+                    <li>
+                        Managed eight technical contributors and project
+                        timelines while supporting troubleshooting and server
+                        operations for chapter initiatives.
+                    </li>
+                </ul>
             ),
         },
         {
-            company: "GeeksForGeeks",
+            company: "GeeksforGeeks",
             link: "https://geeksforgeeks.org",
-            location: "New Delhi, India",
+            location: "New Delhi, India — On-site",
             badges: ["Hackathons", "Community Building"],
             title: "Core Technical Team Member",
             logoUrl: "https://media.geeksforgeeks.org/gfg-gg-logo.svg",
-            start: "2022",
-            end: "2024",
+            start: "October 2022",
+            end: "April 2024",
             description: (
-                <>
-                    Core member organizing technical events and hackathons.
-                    <ul className="list-inside list-disc">
-                        <li>
-                            Contributed as a Core Member of GFG, organizing the
-                            Phoenix Hackathon, where I achieved 1st place.
-                        </li>
-                        <li>
-                            Organized and led Hack-Innovate, a two-day hackathon
-                            during the tech fest, attracting over 300
-                            participants and showcasing 50+ innovative
-                            solutions.
-                        </li>
-                    </ul>
-                </>
+                <ul className="list-inside list-disc">
+                    <li>
+                        Contributed as a core member while organizing the
+                        Phoenix Hackathon, where I also won first place.
+                    </li>
+                    <li>
+                        Organized Hack-Innovate, a two-day hackathon that
+                        attracted 300+ participants and showcased more than 50
+                        project submissions.
+                    </li>
+                </ul>
             ),
         },
     ],
@@ -479,48 +463,92 @@ export const RESUME_DATA = {
         },
     ],
     skills: [
-        "Python",
-        "C/C++",
-        "JS/TS",
-        "PyTorch",
-        "Transformers",
-        "Pydantic",
-        "FastAPI",
-        "Pandas",
-        "NumPy",
-        "Matplotlib",
-        "Azure",
-        "Docker",
-        "Kubernetes",
-        "Portainer",
-        "Traefik",
-        "Harbor",
-        "Terraform",
-        "GitLab CI",
-        "GitHub Actions",
-        "PostgreSQL",
-        "MongoDB",
-        "Milvus",
-        "Minio",
-        "Redis",
-        "Neo4j",
-        "Kafka",
-        "Rabbit MQ",
-        "Pytest",
-        "Selenium",
-        "Prometheus",
-        "Grafana",
-        "Loki",
-        "Promtail",
-        "Alert Manager",
-        "ESP IDF",
-        "PlatformIO",
-        "ESP32/Arduino",
-        "ESP32-CAM",
-        "NodeMCU",
-        "Raspberry Pi",
-        "LLMs",
-        "Fine-tuning",
+        {
+            category: "Programming",
+            skills: ["Python", "C/C++", "JavaScript/TypeScript"],
+        },
+        {
+            category: "AI/ML",
+            skills: [
+                "PyTorch",
+                "Transformers",
+                "LLMs",
+                "Fine-tuning",
+                "LiteLLM",
+                "Pandas",
+                "NumPy",
+                "Matplotlib",
+            ],
+        },
+        {
+            category: "Backend & Data",
+            skills: [
+                "FastAPI",
+                "Pydantic",
+                "REST APIs",
+                "WebSockets",
+                "Gunicorn",
+                "Uvicorn",
+                "Alembic",
+                "PostgreSQL",
+                "MongoDB",
+                "Milvus",
+                "MinIO",
+                "Redis",
+                "Neo4j",
+            ],
+        },
+        {
+            category: "Cloud & Infrastructure",
+            skills: [
+                "AWS (ECS, ECR, EFS)",
+                "Docker",
+                "Docker Compose",
+                "Kubernetes (K3s)",
+                "Linux",
+                "Portainer",
+                "Traefik",
+                "Harbor",
+                "Terraform",
+            ],
+        },
+        {
+            category: "Messaging",
+            skills: ["Kafka", "RabbitMQ"],
+        },
+        {
+            category: "Testing",
+            skills: ["Pytest (unit and integration testing)", "Selenium"],
+        },
+        {
+            category: "Version Control",
+            skills: ["Git", "GitHub"],
+        },
+        {
+            category: "CI/CD & Observability",
+            skills: [
+                "GitLab CI",
+                "GitHub Actions",
+                "Prometheus",
+                "Grafana",
+                "Loki",
+                "Promtail",
+                "Alertmanager",
+                "Elastic Stack (Elasticsearch, Kibana, Filebeat)",
+            ],
+        },
+        {
+            category: "Embedded Systems",
+            skills: [
+                "ESP-IDF",
+                "PlatformIO",
+                "Arduino",
+                "ESP32/ESP8266",
+                "ESP32-CAM",
+                "NodeMCU",
+                "Raspberry Pi",
+            ],
+        },
     ],
     projects: [
         /*
@@ -592,37 +620,37 @@ export const RESUME_DATA = {
         {
             title: "Y Combinator's AI Startup School",
             description:
-                "Selected among 2,000 top CS students globally to attend YC's first-ever AI Startup School in San Francisco.",
+                "Chosen as one of 2,000 CS students worldwide to attend YC's first AI Startup School in San Francisco.",
             year: "2025",
             link: "https://www.ycombinator.com/events/ai-startup-school",
         },
         {
             title: "Google InnoSprint Hackathon",
-            description: "1st runner up",
+            description: "First runner-up",
             year: "2023",
             link: "https://www.linkedin.com/posts/devasheesh-mishra_hackathon-innosprint-innovation-activity-7162092090531721216-6BG5",
         },
         {
             title: "Phoenix Hackathon",
-            description: "Secured 1st position",
+            description: "Won first place",
             year: "2022",
             link: "https://www.linkedin.com/posts/devasheesh-mishra_srmist-srmuniversity-hackathon-activity-7162482926939492352-rLm4",
         },
         {
             title: "Code-A-Thon",
-            description: "1st runner up",
+            description: "First runner-up",
             year: "2022",
             link: "https://www.linkedin.com/posts/devasheesh-mishra_hackathonrunnerup-innovativeexcellence-srmist-activity-7162845340889440256-HPDg",
         },
         {
             title: "Live-Project Competition",
-            description: "2nd runner up",
+            description: "Second runner-up",
             year: "2023",
-            link: "https://www.linkedin.com/posts/devasheesh-mishra_hackathonachievement-innovativeexcellence-activity-7163207701899010048-XfRD",
+            link: "https://www.linkedin.com/posts/devasheesh-mishra_hackathonachievement-innovativeexcellence-srmist-activity-7163207701899010048-XfRD",
         },
         {
-            title: "SIH",
-            description: "1st runner up at college level",
+            title: "Smart India Hackathon",
+            description: "First runner-up at the college level",
             year: "2023",
             link: "",
         },
@@ -647,12 +675,12 @@ export const RESUME_DATA = {
     extracurricular: [
         {
             position: "Course Instructor",
-            organization: "GeeksForGeeks",
+            organization: "GeeksforGeeks",
             period: "September 2024 - April 2026",
         },
         {
             position: "Assistant Course Instructor",
-            organization: "GeeksForGeeks",
+            organization: "GeeksforGeeks",
             period: "July 2024 - September 2024",
         },
     ],
