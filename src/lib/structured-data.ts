@@ -40,7 +40,6 @@ export function generatePersonStructuredData() {
                 "@type": "Place",
                 name: RESUME_DATA.location,
             },
-            occupationalCategory: RESUME_DATA.occupationCategory,
         })),
         knowsAbout: RESUME_DATA.skills.flatMap((section) => section.skills),
     };

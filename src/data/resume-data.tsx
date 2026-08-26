@@ -12,16 +12,7 @@ export const RESUME_DATA = {
     location: "San Francisco, USA",
     locationLink: "https://www.google.com/maps/place/San+Francisco",
     personalWebsiteUrl: "https://devasheeshmishra.com",
-    about: "Founder and CEO of Recallr AI, building the intelligence and memory layer for private capital.",
-    summary: (
-        <>
-            Founder and CEO of Recallr AI, the intelligence and memory layer for
-            private capital. Previously built Recallr as a long-term memory
-            layer for conversational AI systems. Was selected for Y
-            Combinator&apos;s first ever AI Startup School among 2,000 top CS
-            students globally.
-        </>
-    ),
+    about: "Founder and CTO of Recallr AI and AI/ML engineer specializing in conversational memory, retrieval systems, speech AI, and production LLM infrastructure; previously founded an acquired AI home-automation startup. Authoring three studies on scalable long-term memory, retrieval-free parametric memory, and hallucination dynamics in small language models. Selected for Founders, Inc.'s Canopy 2026 and Y Combinator's AI Startup School 2025.",
     avatarUrl: "https://avatars.githubusercontent.com/u/72092910?v=4",
     contact: {
         email: "devasheesh@recallrai.com",
@@ -682,6 +673,79 @@ export const RESUME_DATA = {
             position: "Assistant Course Instructor",
             organization: "GeeksforGeeks",
             period: "July 2024 - September 2024",
+        },
+    ],
+    interest: [
+        {
+            title: "Homelab Overlord",
+            organization: "Skynet Lite · Self-employed",
+            period: "September 2020 - Present · 6 yrs",
+            location: "Skynet Command Center · On-site",
+            description: (
+                <>
+                    <p>
+                        Masterminding a personal cloud and compute cluster from
+                        the ground up, because sleep is overrated and vendor
+                        lock-in is scary. My mission: learn enterprise
+                        technology without the enterprise budget or the
+                        change-control meetings.
+                    </p>
+                    <p className="mt-2">
+                        <strong>Key Operations & Technologies:</strong>
+                    </p>
+                    <ul className="list-inside list-disc">
+                        <li>
+                            <strong>Virtualization Command Center:</strong>{" "}
+                            Running Proxmox VE as the bare-metal hypervisor,
+                            juggling VMs like a digital circus performer.
+                        </li>
+                        <li>
+                            <strong>Storage Fortress (Mostly):</strong>{" "}
+                            Wrangling terabytes of vital data (Linux ISOs,
+                            project backups, and a few memes) using Unraid
+                            hosted within a dedicated VM.
+                        </li>
+                        <li>
+                            <strong>K3s Kubernetes Cluster:</strong>{" "}
+                            Orchestrating containerized applications across a
+                            hybrid cluster with:
+                            <ul className="ml-4 list-inside list-[circle]">
+                                <li>
+                                    A Raspberry Pi master node (doing its best).
+                                </li>
+                                <li>
+                                    Two CPU-based worker nodes (VMs) for general
+                                    workloads.
+                                </li>
+                                <li>
+                                    Two GPU-accelerated worker nodes (VMs)
+                                    powering ML experiments and hosting personal
+                                    projects.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Gateway Guardian:</strong> Employing Traefik
+                            as the reverse proxy, handling ingress routing and
+                            SSL certificates so services are securely exposed.
+                        </li>
+                        <li>
+                            <strong>Digital Life Support Systems:</strong>{" "}
+                            Achieving digital sovereignty by self-hosting
+                            critical infrastructure, including Bitwarden for
+                            password management and Nextcloud as a private
+                            cloud.
+                        </li>
+                    </ul>
+                    <p className="mt-2">
+                        Constantly tinkering, troubleshooting (often
+                        self-inflicted issues), automating, and scaling this
+                        mini-ecosystem. My power bill may weep, but my hands-on
+                        skills in virtualization, container orchestration,
+                        networking, and system administration are leveling up.
+                    </p>
+                </>
+            ),
         },
     ],
 };

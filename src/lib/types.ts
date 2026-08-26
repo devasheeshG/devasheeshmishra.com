@@ -10,7 +10,6 @@ export interface ResumeData {
     location: string;
     locationLink: string;
     about: string;
-    summary: string | React.ReactNode;
     avatarUrl: string;
     personalWebsiteUrl: string;
     contact: {
@@ -118,7 +117,6 @@ export interface GraphQLMe {
     location: string;
     locationLink: string;
     about: string;
-    summary: string;
     avatarUrl: string;
     personalWebsiteUrl: string;
     contact: GraphQLContact;
@@ -150,7 +148,6 @@ export function resumeDataToGraphQL(data: ResumeData): GraphQLMe {
         location: data.location,
         locationLink: data.locationLink,
         about: data.about,
-        summary: reactToString(data.summary),
         avatarUrl: data.avatarUrl,
         personalWebsiteUrl: data.personalWebsiteUrl,
         contact: {

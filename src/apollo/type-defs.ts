@@ -123,9 +123,6 @@ export class Me {
     about: string;
 
     @Field(() => String)
-    summary: string;
-
-    @Field(() => String)
     avatarUrl: string;
 
     @Field(() => String)
