@@ -9,7 +9,7 @@ import {
 export const RESUME_DATA = {
     name: "Devasheesh Mishra",
     initials: "DM",
-    location: "San Francisco, USA",
+    location: "San Francisco, CA, USA",
     locationLink: "https://www.google.com/maps/place/San+Francisco",
     personalWebsiteUrl: "https://devasheeshmishra.com",
     about: "Founder and CTO of Recallr AI and AI/ML engineer specializing in conversational memory, retrieval systems, speech AI, and production LLM infrastructure; previously founded an acquired AI home-automation startup. Authoring three studies on scalable long-term memory, retrieval-free parametric memory, and hallucination dynamics in small language models. Selected for Founders, Inc.'s Canopy 2026 and Y Combinator's AI Startup School 2025.",
@@ -58,7 +58,7 @@ export const RESUME_DATA = {
         {
             company: "Recallr AI Inc.",
             link: "https://recallrai.com",
-            location: "San Francisco, USA — On-site",
+            location: "San Francisco, CA, USA — On-site",
             badges: ["AI", "Enterprise Memory", "Private Capital"],
             title: "Founder and CTO",
             logoUrl: "/recallrai-logo.png",
@@ -107,7 +107,7 @@ export const RESUME_DATA = {
         {
             company: "Founders, Inc.",
             link: "https://f.inc/canopy",
-            location: "San Francisco, California, United States — On-site",
+            location: "San Francisco, CA, USA — On-site",
             badges: ["Startup Program", "San Francisco"],
             title: "Canopy 2026",
             logoUrl: "/founders-inc-logo.jpg",
@@ -132,7 +132,7 @@ export const RESUME_DATA = {
         {
             company: "MIRA",
             link: "https://www.trymira.com",
-            location: "San Francisco, California, United States — Remote",
+            location: "San Francisco, CA, USA — Remote",
             badges: [],
             title: "AI/ML Engineer",
             logoUrl: "/mira-logo.png",
@@ -181,7 +181,7 @@ export const RESUME_DATA = {
         {
             company: "Stapes AI",
             link: "https://github.com/stapesai",
-            location: "Delhi, India — On-site",
+            location: "New Delhi, India — On-site",
             badges: ["AI", "IoT", "Home Automation", "Startup"],
             title: "Founder and CEO",
             logoUrl: "https://avatars.githubusercontent.com/u/99021598?v=4",
@@ -244,7 +244,7 @@ export const RESUME_DATA = {
         {
             company: "Buildspace",
             link: "https://buildspace.so",
-            location: "San Francisco, USA — Remote",
+            location: "San Francisco, CA, USA — Remote",
             badges: ["Startup Program", "Product Development"],
             title: "Builder, Nights & Weekends S5",
             logoUrl: "https://avatars.githubusercontent.com/u/65048157?v=4",
