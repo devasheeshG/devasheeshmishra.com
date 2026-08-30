@@ -13,7 +13,7 @@ export const RESUME_DATA = {
     locationLink: "https://www.google.com/maps/place/San+Francisco",
     personalWebsiteUrl: "https://devasheeshmishra.com",
     about: "Founder and CTO of Recallr AI and AI/ML engineer specializing in conversational memory, retrieval systems, speech AI, and production LLM infrastructure; previously founded an acquired AI home-automation startup. Authoring three studies on scalable long-term memory, retrieval-free parametric memory, and hallucination dynamics in small language models. Selected for Founders, Inc.'s Canopy 2026 and Y Combinator's AI Startup School 2025.",
-    avatarUrl: "https://avatars.githubusercontent.com/u/72092910?v=4",
+    avatarUrl: "/assets/devasheesh-avatar.jpg",
     contact: {
         email: "devasheesh@recallrai.com",
         tel: "+14152120310",
@@ -61,7 +61,7 @@ export const RESUME_DATA = {
             location: "San Francisco, CA, USA — On-site",
             badges: ["AI", "Enterprise Memory", "Private Capital"],
             title: "Founder and CTO",
-            logoUrl: "/recallrai-logo.png",
+            logoUrl: "/assets/recallrai-logo.png",
             start: "January 2025",
             end: null,
             description: (
@@ -110,7 +110,7 @@ export const RESUME_DATA = {
             location: "San Francisco, CA, USA — On-site",
             badges: ["Startup Program", "San Francisco"],
             title: "Canopy 2026",
-            logoUrl: "/founders-inc-logo.jpg",
+            logoUrl: "/assets/founders-inc-logo.jpg",
             start: "March 2026",
             end: "May 2026",
             description: (
@@ -135,7 +135,7 @@ export const RESUME_DATA = {
             location: "San Francisco, CA, USA — Remote",
             badges: [],
             title: "AI/ML Engineer",
-            logoUrl: "/mira-logo.png",
+            logoUrl: "/assets/mira-logo.png",
             start: "September 2025",
             end: "November 2025",
             description: (
@@ -184,7 +184,7 @@ export const RESUME_DATA = {
             location: "New Delhi, India — On-site",
             badges: ["AI", "IoT", "Home Automation", "Startup"],
             title: "Founder and CEO",
-            logoUrl: "https://avatars.githubusercontent.com/u/99021598?v=4",
+            logoUrl: "/assets/stapes-ai-logo.png",
             start: "May 2024",
             end: "January 2025",
             description: (
@@ -215,7 +215,7 @@ export const RESUME_DATA = {
             location: "Noida, India — On-site",
             badges: ["AI/ML", "Computer Vision", "Databases"],
             title: "AI/ML Engineer Intern",
-            logoUrl: "https://proeffico.ai/favicon.ico",
+            logoUrl: "/assets/proeffico-logo.png",
             start: "August 2024",
             end: "September 2024",
             description: (
@@ -246,7 +246,7 @@ export const RESUME_DATA = {
             location: "San Francisco, CA, USA — Remote",
             badges: ["Startup Program", "Product Development"],
             title: "Builder, Nights & Weekends S5",
-            logoUrl: "https://avatars.githubusercontent.com/u/65048157?v=4",
+            logoUrl: "/assets/buildspace-logo.png",
             start: "June 2024",
             end: "August 2024",
             description: (
@@ -275,7 +275,7 @@ export const RESUME_DATA = {
             location: "New Delhi, India — On-site",
             badges: ["Education", "ML Workshops"],
             title: "Technical Lead",
-            logoUrl: "https://media.geeksforgeeks.org/gfg-gg-logo.svg",
+            logoUrl: "/assets/geeksforgeeks-logo.svg",
             start: "April 2024",
             end: "February 2026",
             description: (
@@ -304,7 +304,7 @@ export const RESUME_DATA = {
             location: "New Delhi, India — On-site",
             badges: ["Hackathons", "Community Building"],
             title: "Core Technical Team Member",
-            logoUrl: "https://media.geeksforgeeks.org/gfg-gg-logo.svg",
+            logoUrl: "/assets/geeksforgeeks-logo.svg",
             start: "October 2022",
             end: "April 2024",
             description: (

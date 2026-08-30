@@ -1,3 +1,4 @@
+import { headers } from "next/headers";
 import { ImageResponse } from "next/og";
 import { RESUME_DATA } from "../data/resume-data";
 
@@ -12,6 +13,19 @@ export const size = {
 export const contentType = "image/png";
 
 export default async function Image() {
+    const requestHeaders = headers();
+    const host = requestHeaders.get("host") ?? "devasheeshmishra.com";
+    const protocol = requestHeaders.get("x-forwarded-proto") ?? "https";
+    const avatarResponse = await fetch(
+        new URL(RESUME_DATA.avatarUrl, `${protocol}://${host}`)
+    );
+    const avatarBytes = new Uint8Array(await avatarResponse.arrayBuffer());
+    let avatarBinary = "";
+    for (const byte of avatarBytes) {
+        avatarBinary += String.fromCharCode(byte);
+    }
+    const avatarUrl = `data:${avatarResponse.headers.get("content-type") ?? "image/jpeg"};base64,${btoa(avatarBinary)}`;
+
     return new ImageResponse(
         <div
             style={{
@@ -35,7 +49,7 @@ export default async function Image() {
             >
                 {/* biome-ignore lint/performance/noImgElement: ImageResponse context requires img element */}
                 <img
-                    src={RESUME_DATA.avatarUrl}
+                    src={avatarUrl}
                     alt={RESUME_DATA.name}
                     style={{
                         width: "150px",
