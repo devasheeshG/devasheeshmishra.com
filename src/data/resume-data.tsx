@@ -215,8 +215,7 @@ export const RESUME_DATA = {
             location: "Noida, India — On-site",
             badges: ["AI/ML", "Computer Vision", "Databases"],
             title: "AI/ML Engineer Intern",
-            logoUrl:
-                "https://proeffico.com/wp-content/uploads/2023/09/Copy-of-proeffico-logo-1.png",
+            logoUrl: "https://proeffico.ai/favicon.ico",
             start: "August 2024",
             end: "September 2024",
             description: (
