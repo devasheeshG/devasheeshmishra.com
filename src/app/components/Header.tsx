@@ -92,8 +92,8 @@ function ContactButtons({ contact }: ContactButtonsProps) {
  */
 export function Header() {
     return (
-        <header className="flex items-center justify-between">
-            <div className="flex-1 space-y-1.5">
+        <header className="flex items-start justify-between gap-4 sm:gap-8">
+            <div className="min-w-0 flex-1 space-y-1.5">
                 <h1 className="text-2xl font-bold" id="resume-name">
                     {RESUME_DATA.name}
                 </h1>
@@ -106,7 +106,7 @@ export function Header() {
                 <ContactButtons contact={RESUME_DATA.contact} />
             </div>
 
-            <Avatar className="size-28" aria-hidden="true">
+            <Avatar className="mt-1 size-32 shrink-0" aria-hidden="true">
                 <AvatarImage
                     alt={`${RESUME_DATA.name}'s profile picture`}
                     src={RESUME_DATA.avatarUrl}
