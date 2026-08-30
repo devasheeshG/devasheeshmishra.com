@@ -15,7 +15,6 @@ import { Header } from "./components/Header";
 import { Interest } from "./components/Interest";
 import { Research } from "./components/Research";
 import { Skills } from "./components/Skills";
-import { Summary } from "./components/Summary";
 import { WorkExperience } from "./components/WorkExperience";
 
 export const metadata: Metadata = {
@@ -86,12 +85,6 @@ export default function ResumePage() {
                     </SectionErrorBoundary>
 
                     <div className="space-y-8 print:space-y-4">
-                        <SectionErrorBoundary sectionName="Summary">
-                            <Suspense fallback={<SectionSkeleton lines={2} />}>
-                                <Summary about={RESUME_DATA.about} />
-                            </Suspense>
-                        </SectionErrorBoundary>
-
                         <SectionErrorBoundary sectionName="Skills">
                             <Suspense fallback={<SectionSkeleton lines={2} />}>
                                 <Skills skills={RESUME_DATA.skills} />
