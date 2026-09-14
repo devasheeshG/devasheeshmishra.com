@@ -543,7 +543,7 @@ export const RESUME_DATA = {
     projects: [
         {
             title: "Codex Proxy",
-            techStack: ["Python", "FastAPI", "PostgreSQL", "Next.js", "Docker"],
+            techStack: ["Python", "FastAPI", "PostgreSQL", "Docker"],
             description:
                 "Built a self-hosted, OpenAI-compatible gateway that pools authorized Codex subscription accounts behind one endpoint. Implemented quota-aware priority routing, concurrency control, transparent failover, per-user model and budget policies, encrypted credentials, usage accounting, request archives, notifications, and an operations dashboard. Used internally to process more than 20 billion tokens across approximately 70,000 requests in three months.",
             link: {
@@ -553,7 +553,7 @@ export const RESUME_DATA = {
         },
         {
             title: "Claude Code Proxy",
-            techStack: ["Python", "FastAPI", "PostgreSQL", "Next.js", "Docker"],
+            techStack: ["Python", "FastAPI", "PostgreSQL", "Docker"],
             description:
                 "Built a self-hosted, Anthropic-compatible gateway that pools authorized Claude subscription accounts for team use. Added quota-aware routing, reserved concurrency lanes, transparent failover, prompt-cache controls, per-user access and spending policies, encrypted credentials, request archives, Telegram notifications, and a responsive operations dashboard.",
             link: {
