@@ -34,11 +34,6 @@ function ProjectLink({ title, link }: ProjectLinkProps) {
                 aria-label={`${title} project (opens in new tab)`}
             >
                 {title}
-                <span
-                    className="size-1 rounded-full bg-green-500"
-                    title="Active project indicator"
-                    aria-hidden="true"
-                />
             </a>
             <div
                 className="hidden font-mono text-xs underline print:visible"
