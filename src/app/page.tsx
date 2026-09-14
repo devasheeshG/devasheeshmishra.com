@@ -8,11 +8,11 @@ import { RESUME_DATA } from "@/data/resume-data";
 import { generateResumeStructuredData } from "@/lib/structured-data";
 import { Achievements } from "./components/Achievements";
 import { Certifications } from "./components/Certifications";
-// import { Projects } from "./components/Projects";
 import { Education } from "./components/Education";
 import { Extracurricular } from "./components/Extracurricular";
 import { Header } from "./components/Header";
 import { Interest } from "./components/Interest";
+import { Projects } from "./components/Projects";
 import { Research } from "./components/Research";
 import { Skills } from "./components/Skills";
 import { WorkExperience } from "./components/WorkExperience";
@@ -103,11 +103,11 @@ export default function ResumePage() {
                             </Suspense>
                         </SectionErrorBoundary>
 
-                        {/* <SectionErrorBoundary sectionName="Projects">
+                        <SectionErrorBoundary sectionName="Projects">
                             <Suspense fallback={<SectionSkeleton lines={5} />}>
                                 <Projects projects={RESUME_DATA.projects} />
                             </Suspense>
-                        </SectionErrorBoundary> */}
+                        </SectionErrorBoundary>
 
                         <SectionErrorBoundary sectionName="Achievements">
                             <Suspense fallback={<SectionSkeleton lines={3} />}>
