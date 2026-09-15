@@ -627,7 +627,7 @@ export const RESUME_DATA = {
             description:
                 "Chosen as one of 2,000 CS students worldwide to attend YC's first AI Startup School in San Francisco.",
             year: "2025",
-            link: "https://www.ycombinator.com/events/ai-startup-school",
+            link: "https://www.ycombinator.com/events/ai-sus",
         },
         {
             title: "Google InnoSprint Hackathon",
