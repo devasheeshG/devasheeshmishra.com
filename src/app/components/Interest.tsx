@@ -17,14 +17,8 @@ function InterestCard({ item }: { item: InterestItem }) {
                         {item.title}
                     </h3>
                     <div className="text-sm tabular-nums text-gray-500">
-                        {item.period}
+                        {item.start} - {item.end ?? "Present"}
                     </div>
-                </div>
-                <div className="font-mono text-sm text-foreground/80 print:text-[10px]">
-                    {item.organization}
-                </div>
-                <div className="text-xs font-medium text-gray-600 print:text-[10px]">
-                    {item.location}
                 </div>
             </CardHeader>
             <CardContent>
@@ -48,7 +42,7 @@ export function Interest({ interest }: InterestProps) {
                 aria-labelledby="interest"
             >
                 {interest.map((item) => (
-                    <article key={item.title + item.organization}>
+                    <article key={item.title}>
                         <InterestCard item={item} />
                     </article>
                 ))}

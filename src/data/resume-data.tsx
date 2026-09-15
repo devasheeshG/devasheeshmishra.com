@@ -561,18 +561,11 @@ export const RESUME_DATA = {
                 href: "https://github.com/devasheeshG/claude-code-proxy",
             },
         },
-        /*
         {
             title: "Universal TV Remote for Mac",
-            techStack: [
-                "Swift",
-                "SwiftUI",
-                "Bonjour",
-                "SSDP",
-                "WebSockets",
-            ],
+            techStack: ["Swift", "SwiftUI", "Bonjour", "SSDP", "WebSockets"],
             description:
-                "A native macOS menu-bar remote for every smart TV on your network — Fire TV, Android TV, Samsung, LG, and Roku — auto-discovered, no configuration, no cloud. Built with Swift/SwiftUI as a lightweight ~1 MB binary. Supports full remote control, keyboard text input, app shortcuts, and one-time pairing with persistent tokens.",
+                "Built a native, approximately 1 MB SwiftUI menu-bar remote that automatically discovers and controls Fire TV, Android and Google TV, Samsung, LG, and Roku devices without configuration or cloud services. Unified brand-specific REST, TLS and protobuf, WebSocket, and ECP protocols behind a common driver interface, with one-time pairing, persistent tokens, Wake-on-LAN, keyboard input, and app shortcuts.",
             link: {
                 label: "github.com/devasheeshG/universal-tv-remote-macos",
                 href: "https://github.com/devasheeshG/universal-tv-remote-macos",
@@ -584,15 +577,17 @@ export const RESUME_DATA = {
                 "Python",
                 "Playwright",
                 "OpenAI",
-                "GitHub Pages",
+                "TypeScript",
+                "GitHub Actions",
             ],
             description:
-                "A free, open JSON API over the entire Y Combinator Startup Directory — with transcribed application and demo day videos. Built for founders, indie hackers, and researchers to query YC startup data — filtering by batch, industry, hiring status, and more — without writing scrapers from scratch.",
+                "Built a free, authentication-free JSON API and typed Python and TypeScript SDKs covering more than 6,000 Y Combinator companies across 50 batches. A GitHub Actions CI/CD pipeline automatically refreshes and republishes 50+ fields every day, including founders, verified emails, jobs, news, and launches, and processes 255 public application and Demo Day videos into timestamped, speaker-diarized transcripts.",
             link: {
                 label: "github.com/devasheeshG/yc-api",
                 href: "https://github.com/devasheeshG/yc-api",
             },
         },
+        /*
         {
             title: "Automatic Speech Recognition System",
             techStack: [
@@ -697,73 +692,73 @@ export const RESUME_DATA = {
     interest: [
         {
             title: "Homelab Overlord",
-            organization: "Skynet Lite · Self-employed",
-            period: "September 2020 - Present · 6 yrs",
-            location: "Skynet Command Center · On-site",
+            start: "September 2020",
+            end: null,
             description: (
-                <>
-                    <p>
-                        Masterminding a personal cloud and compute cluster from
-                        the ground up, because sleep is overrated and vendor
-                        lock-in is scary. My mission: learn enterprise
-                        technology without the enterprise budget or the
-                        change-control meetings.
-                    </p>
-                    <p className="mt-2">
-                        <strong>Key Operations & Technologies:</strong>
-                    </p>
-                    <ul className="list-inside list-disc">
-                        <li>
-                            <strong>Virtualization Command Center:</strong>{" "}
-                            Running Proxmox VE as the bare-metal hypervisor,
-                            juggling VMs like a digital circus performer.
-                        </li>
-                        <li>
-                            <strong>Storage Fortress (Mostly):</strong>{" "}
-                            Wrangling terabytes of vital data (Linux ISOs,
-                            project backups, and a few memes) using Unraid
-                            hosted within a dedicated VM.
-                        </li>
-                        <li>
-                            <strong>K3s Kubernetes Cluster:</strong>{" "}
-                            Orchestrating containerized applications across a
-                            hybrid cluster with:
-                            <ul className="ml-4 list-inside list-[circle]">
-                                <li>
-                                    A Raspberry Pi master node (doing its best).
-                                </li>
-                                <li>
-                                    Two CPU-based worker nodes (VMs) for general
-                                    workloads.
-                                </li>
-                                <li>
-                                    Two GPU-accelerated worker nodes (VMs)
-                                    powering ML experiments and hosting personal
-                                    projects.
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Gateway Guardian:</strong> Employing Traefik
-                            as the reverse proxy, handling ingress routing and
-                            SSL certificates so services are securely exposed.
-                        </li>
-                        <li>
-                            <strong>Digital Life Support Systems:</strong>{" "}
-                            Achieving digital sovereignty by self-hosting
-                            critical infrastructure, including Bitwarden for
-                            password management and Nextcloud as a private
-                            cloud.
-                        </li>
-                    </ul>
-                    <p className="mt-2">
-                        Constantly tinkering, troubleshooting (often
-                        self-inflicted issues), automating, and scaling this
-                        mini-ecosystem. My power bill may weep, but my hands-on
-                        skills in virtualization, container orchestration,
-                        networking, and system administration are leveling up.
-                    </p>
-                </>
+                <ul className="list-inside list-disc">
+                    <li>
+                        Designed and maintain a self-hosted cloud and AI compute
+                        environment on an Inspur server. It combines bare-metal
+                        virtualization, distributed GPU compute, Kubernetes
+                        orchestration, private networking, storage, CI/CD, and
+                        observability, providing a production-like platform for
+                        personal services and ML workloads.
+                    </li>
+                    <li>
+                        The server is equipped with a 64-core CPU, 128 GB RAM,
+                        redundant network interfaces, four NVIDIA Tesla P40 GPUs
+                        with 24 GB VRAM each for local LLM inference, and two
+                        NVIDIA RTX 3060 GPUs for image generation, ASR, and TTS
+                        workloads. It also includes a 10 TB HDD and a 2 TB NVMe
+                        drive.
+                    </li>
+                    <li>
+                        Developed custom inference kernels and runtime
+                        optimizations for Tesla P40 hardware, improving
+                        compatibility and efficiency when running language
+                        models on older GPU architectures.
+                    </li>
+                    <li>
+                        Use Proxmox VE as the bare-metal hypervisor and host
+                        Unraid in a dedicated VM as the storage server for
+                        persistent storage, backups, and large ML and project
+                        datasets. Operate a heterogeneous K3s cluster with a
+                        Raspberry Pi control-plane node, two CPU worker nodes,
+                        and two GPU-accelerated workers for ML experiments and
+                        containerized services.
+                    </li>
+                    <li>
+                        Self-host GitLab for source control and CI/CD, Harbor
+                        for private Docker and OCI image storage, and Traefik
+                        for ingress routing and automated TLS termination. Use
+                        Prometheus, Grafana, and Loki for infrastructure
+                        metrics, dashboards, and centralized logging.
+                    </li>
+                    <li>
+                        Run privacy-focused applications including Bitwarden,
+                        Nextcloud, Jellyfin, and Immich, with persistent storage
+                        and controlled external access.
+                    </li>
+                    <li>
+                        Built and operate a local-first, Jarvis-style assistant
+                        that originated from Stapes AI and controls nearly every
+                        device and service in my home. Core processing and
+                        automation run on local hardware.
+                    </li>
+                    <li>
+                        Built a custom application to monitor and control the
+                        Inspur server, available at{" "}
+                        <a
+                            className="underline"
+                            href="https://github.com/devasheeshG/inspur-mgmnt-app"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            inspur-mgmnt-app
+                        </a>
+                        .
+                    </li>
+                </ul>
             ),
         },
     ],

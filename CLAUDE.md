@@ -1,5 +1,13 @@
 # CLAUDE.md
 
+## Resume Synchronization
+
+The website resume data at `src/data/resume-data.tsx` and the LaTeX resume in `../latex-resume/` must stay in sync word-for-word. All content present in the LaTeX resume must also be present on the website. The website may contain extra content beyond what is in the LaTeX resume.
+
+When editing resume content on the website, update the LaTeX resume to match unless the user specifically asks for a difference between the two.
+
+Whenever the LaTeX resume changes, run `pdflatex main.tex` in `../latex-resume/` and copy the generated `main.pdf` to `public/resume.pdf`.
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
