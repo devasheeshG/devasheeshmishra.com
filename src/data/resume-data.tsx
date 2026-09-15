@@ -50,8 +50,8 @@ export const RESUME_DATA = {
         {
             school: "SRM Institute of Science and Technology",
             degree: "Bachelor of Technology in Computer Science, Specialization in AI and ML; CGPA: 8.5",
-            start: "2022",
-            end: "2026",
+            start: "May 2022",
+            end: "July 2026",
         },
     ],
     work: [
@@ -327,7 +327,7 @@ export const RESUME_DATA = {
             title: "A Name Is Not a Memory: Relational Binding in Continual Parametric Memory for Conversational Agents",
             link: null,
             status: "In Progress",
-            start: "Aug 2026",
+            start: "August 2026",
             end: null,
             description: (
                 <ul className="list-inside list-disc space-y-1">
@@ -350,7 +350,7 @@ export const RESUME_DATA = {
             title: "Hallucination Dynamics in Small Language Models: A Large-Scale Empirical Study",
             link: null,
             status: "In Progress",
-            start: "Jan 2026",
+            start: "January 2026",
             end: null,
             description: (
                 <ul className="list-inside list-disc space-y-1">
@@ -408,7 +408,7 @@ export const RESUME_DATA = {
             title: "Recallr AI: Scalable Architecture for Dynamic Long-Term Memory in Conversational AI Agents",
             link: "https://github.com/recallrai/white-paper",
             status: "In Progress",
-            start: "Apr 2025",
+            start: "April 2025",
             end: null,
             description: (
                 <ul className="list-inside list-disc space-y-1">
@@ -709,8 +709,10 @@ export const RESUME_DATA = {
                         redundant network interfaces, four NVIDIA Tesla P40 GPUs
                         with 24 GB VRAM each for local LLM inference, and two
                         NVIDIA RTX 3060 GPUs for image generation, ASR, and TTS
-                        workloads. It also includes a 10 TB HDD and a 2 TB NVMe
-                        drive.
+                        workloads. Storage includes five 2 TB HDDs, with two
+                        assigned to parity and three in the Unraid array, plus
+                        two 1 TB NVMe drives, including one dedicated to the
+                        storage-pool cache.
                     </li>
                     <li>
                         Developed custom inference kernels and runtime
