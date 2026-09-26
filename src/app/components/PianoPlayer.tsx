@@ -3,8 +3,7 @@
 import { PauseIcon, PlayIcon } from "lucide-react";
 import * as React from "react";
 
-// CC0 performance by Teknopazzo, sourced from Wikimedia Commons.
-const AUDIO_URL = "/assets/gymnopedie-no-1-piano.mp3";
+const AUDIO_URL = "/assets/shabbir-piano-cover.mp3";
 
 export function PianoPlayer() {
     const audioRef = React.useRef<HTMLAudioElement>(null);
@@ -68,21 +67,15 @@ export function PianoPlayer() {
 
     return (
         <div className="fixed bottom-6 left-6 z-40 hidden lg:block print:hidden">
+            {/* biome-ignore lint/a11y/useMediaCaption: This piano recording has no spoken words, and the requested VTT file was removed. */}
             <audio
                 ref={audioRef}
                 src={AUDIO_URL}
-                preload="auto"
+                preload="none"
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
                 onError={() => setHasError(true)}
-            >
-                <track
-                    kind="captions"
-                    src="/assets/gymnopedie-no-1-piano.vtt"
-                    srcLang="en"
-                    label="English description"
-                />
-            </audio>
+            />
 
             <button
                 type="button"

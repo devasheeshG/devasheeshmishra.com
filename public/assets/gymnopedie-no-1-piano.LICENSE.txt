@@ -1,6 +1,0 @@
-Gymnopédie No. 1 by Erik Satie, performed by Teknopazzo.
-Source: https://commons.wikimedia.org/wiki/File:Gymnopedie_No._1..ogg
-License: CC0 1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/)
-
-The original Ogg FLAC recording was converted to a 128 kbps MP3 for browser
-compatibility. No changes were made to the performance.
