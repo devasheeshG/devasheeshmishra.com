@@ -85,12 +85,6 @@ export default function ResumePage() {
                     </SectionErrorBoundary>
 
                     <div className="space-y-8 print:space-y-4">
-                        <SectionErrorBoundary sectionName="Skills">
-                            <Suspense fallback={<SectionSkeleton lines={2} />}>
-                                <Skills skills={RESUME_DATA.skills} />
-                            </Suspense>
-                        </SectionErrorBoundary>
-
                         <SectionErrorBoundary sectionName="Work Experience">
                             <Suspense fallback={<SectionSkeleton lines={6} />}>
                                 <WorkExperience work={RESUME_DATA.work} />
@@ -114,6 +108,12 @@ export default function ResumePage() {
                                 <Achievements
                                     achievements={RESUME_DATA.achievements}
                                 />
+                            </Suspense>
+                        </SectionErrorBoundary>
+
+                        <SectionErrorBoundary sectionName="Skills">
+                            <Suspense fallback={<SectionSkeleton lines={2} />}>
+                                <Skills skills={RESUME_DATA.skills} />
                             </Suspense>
                         </SectionErrorBoundary>
 

@@ -12,7 +12,7 @@ export const RESUME_DATA = {
     location: "San Francisco, CA, USA",
     locationLink: "https://www.google.com/maps/place/San+Francisco",
     personalWebsiteUrl: "https://devasheeshmishra.com",
-    about: "Founder and CTO of Recallr AI and AI/ML engineer specializing in conversational memory, retrieval systems, speech AI, and production LLM infrastructure; previously founded an acquired AI home-automation startup. Authoring three studies on scalable long-term memory, retrieval-free parametric memory, and hallucination dynamics in small language models. Selected for Founders, Inc.'s Canopy 2026 and Y Combinator's AI Startup School 2025.",
+    about: "Founder and CTO of Recallr AI and an AI/ML and backend engineer specializing in memory for AI systems and my interests include AI agents, speech AI, and personal assistants. Authored three studies on scalable long-term memory, retrieval-free parametric memory, and hallucination dynamics in language models. I previously founded an AI home-automation startup that was later acquired. Attended Founders, Inc.'s Canopy 2026 and Y Combinator's AI Startup School.",
     avatarUrl: "/assets/devasheesh-avatar.jpg",
     contact: {
         email: "devasheesh@recallrai.com",
@@ -77,20 +77,22 @@ export const RESUME_DATA = {
                         merge and conflict-resolution rules.
                     </li>
                     <li>
-                        Evaluated Recallr on the{" "}
+                        Built and ran an LLM evaluation and benchmarking
+                        pipeline for Recallr on{" "}
                         <a
                             href="https://github.com/recallrai/benchmarks"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="underline"
                         >
-                            LongMemEval benchmark
+                            LongMemEval
                         </a>
                         , achieving 97.5% overall accuracy, including 97.0%
                         temporal-reasoning accuracy and 97.4% knowledge-update
-                        accuracy. Delivered P95 latency of 408 ms for
-                        Low-Latency recall, 1.575 seconds for Balanced recall,
-                        and 8.619 seconds for Agentic recall.
+                        accuracy. Optimized inference and retrieval performance
+                        to P95 latency of 408 ms for Low-Latency recall, 1.575
+                        seconds for Balanced recall, and 8.619 seconds for
+                        Agentic recall.
                     </li>
                     <li>
                         Evolved Recallr into the intelligence and memory layer
@@ -99,7 +101,9 @@ export const RESUME_DATA = {
                         notes, filings, returns, and investment-committee
                         history into a continuously updated, queryable decision
                         graph that preserves how a firm&apos;s investment
-                        judgment evolves over time.
+                        judgment evolves over time. Generated over $300,000 in
+                        revenue across eight institutional pilots and raised
+                        $200,000 in angel investment.
                     </li>
                 </ul>
             ),
@@ -190,9 +194,10 @@ export const RESUME_DATA = {
             description: (
                 <ul className="list-inside list-disc">
                     <li>
-                        Founded an AI home-automation company, shipped v1.0
-                        within one month, onboarded 50+ beta testers, and led
-                        the company through acquisition.
+                        Founded an AI home-automation company, raised $100,000
+                        in angel investment, shipped v1.0 within one month, and
+                        onboarded 50+ beta testers; the company was later
+                        acquired.
                     </li>
                     <li>
                         Developed a home-automation platform integrating smart
@@ -281,19 +286,14 @@ export const RESUME_DATA = {
             description: (
                 <ul className="list-inside list-disc">
                     <li>
-                        Conducted hands-on machine-learning and deep-learning
-                        workshops for 80+ students, teaching core principles and
-                        practical applications.
+                        Led 10+ GeeksforGeeks machine-learning and coding
+                        workshops across SRM, teaching ML/DL fundamentals to 80+
+                        students and reaching 200+ students through coding
+                        support.
                     </li>
                     <li>
-                        Organized and led 10+ GeeksforGeeks workshops across
-                        SRM, including coding-support sessions that reached more
-                        than 200 students.
-                    </li>
-                    <li>
-                        Managed eight technical contributors and project
-                        timelines while supporting troubleshooting and server
-                        operations for chapter initiatives.
+                        Managed eight technical contributors, project timelines,
+                        troubleshooting, and server operations.
                     </li>
                 </ul>
             ),
@@ -463,7 +463,10 @@ export const RESUME_DATA = {
                 "PyTorch",
                 "Transformers",
                 "LLMs",
-                "Fine-tuning",
+                "Agentic AI",
+                "RAG",
+                "LLM Evaluation",
+                "Fine-tuning/LoRA",
                 "LiteLLM",
                 "Pandas",
                 "NumPy",
@@ -471,21 +474,33 @@ export const RESUME_DATA = {
             ],
         },
         {
+            category: "ML Systems",
+            skills: [
+                "Model Serving & Inference",
+                "MLOps",
+                "Low-Latency Systems",
+                "GPU Inference Optimization",
+                "Data Pipelines",
+            ],
+        },
+        {
             category: "Backend & Data",
             skills: [
+                "Distributed Systems",
+                "System Design",
                 "FastAPI",
                 "Pydantic",
                 "REST APIs",
                 "WebSockets",
-                "Gunicorn",
-                "Uvicorn",
-                "Alembic",
+                "Async/Concurrency",
                 "PostgreSQL",
                 "MongoDB",
-                "Milvus",
-                "MinIO",
                 "Redis",
-                "Neo4j",
+                "Kafka",
+                "RabbitMQ",
+                "Vector Databases (Milvus)",
+                "Knowledge Graphs (Neo4j)",
+                "MinIO",
             ],
         },
         {
@@ -503,22 +518,16 @@ export const RESUME_DATA = {
             ],
         },
         {
-            category: "Messaging",
-            skills: ["Kafka", "RabbitMQ"],
-        },
-        {
-            category: "Testing",
-            skills: ["Pytest (unit and integration testing)", "Selenium"],
-        },
-        {
-            category: "Version Control",
-            skills: ["Git", "GitHub"],
-        },
-        {
-            category: "CI/CD & Observability",
+            category: "CI/CD & Reliability",
             skills: [
+                "Git",
+                "GitHub",
                 "GitLab CI",
                 "GitHub Actions",
+                "Pytest",
+                "Selenium",
+                "High Availability",
+                "Fault Tolerance",
                 "Prometheus",
                 "Grafana",
                 "Loki",
@@ -545,7 +554,7 @@ export const RESUME_DATA = {
             title: "Codex Proxy",
             techStack: ["Python", "FastAPI", "PostgreSQL", "Docker"],
             description:
-                "Built a self-hosted, OpenAI-compatible gateway that pools authorized Codex subscription accounts behind one endpoint. Implemented quota-aware priority routing, concurrency control, transparent failover, per-user model and budget policies, encrypted credentials, usage accounting, request archives, notifications, and an operations dashboard. Used internally to process more than 20 billion tokens across approximately 70,000 requests in three months.",
+                "Built a self-hosted, OpenAI-compatible gateway that pools authorized Codex subscription accounts behind one endpoint. Implemented quota-aware priority routing, asynchronous concurrency control, fault-tolerant failover, per-user model and budget policies, encrypted credentials, observability, usage accounting, request archives, notifications, and an operations dashboard. Processed more than 20 billion tokens across approximately 70,000 requests in three months.",
             link: {
                 label: "github.com/devasheeshG/codex-proxy",
                 href: "https://github.com/devasheeshG/codex-proxy",
@@ -555,7 +564,7 @@ export const RESUME_DATA = {
             title: "Claude Code Proxy",
             techStack: ["Python", "FastAPI", "PostgreSQL", "Docker"],
             description:
-                "Built a self-hosted, Anthropic-compatible gateway that pools authorized Claude subscription accounts for team use. Added quota-aware routing, reserved concurrency lanes, transparent failover, prompt-cache controls, per-user access and spending policies, encrypted credentials, request archives, Telegram notifications, and a responsive operations dashboard.",
+                "Built a self-hosted, Anthropic-compatible gateway that pools authorized Claude subscription accounts behind one endpoint. Implemented quota-aware priority routing, asynchronous concurrency control, fault-tolerant failover, per-user model and budget policies, encrypted credentials, observability, usage accounting, request archives, notifications, and an operations dashboard.",
             link: {
                 label: "github.com/devasheeshG/claude-code-proxy",
                 href: "https://github.com/devasheeshG/claude-code-proxy",
