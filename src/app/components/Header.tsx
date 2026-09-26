@@ -44,7 +44,7 @@ interface ContactButtonsProps {
 function ContactButtons({ contact }: ContactButtonsProps) {
     return (
         <ul
-            className="flex list-none gap-x-1 pt-1 font-mono text-sm text-foreground/80 print:hidden"
+            className="flex flex-wrap list-none gap-1 pt-1 font-mono text-sm text-foreground/80 print:hidden"
             aria-label="Contact links"
         >
             {contact.email && (
@@ -92,7 +92,7 @@ function ContactButtons({ contact }: ContactButtonsProps) {
  */
 export function Header() {
     return (
-        <header className="flex items-start justify-between gap-4 sm:gap-8">
+        <header className="flex flex-col-reverse gap-5 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
             <div className="min-w-0 flex-1 space-y-1.5">
                 <h1 className="text-2xl font-bold" id="resume-name">
                     {RESUME_DATA.name}
@@ -106,7 +106,10 @@ export function Header() {
                 <ContactButtons contact={RESUME_DATA.contact} />
             </div>
 
-            <Avatar className="mt-1 size-32 shrink-0" aria-hidden="true">
+            <Avatar
+                className="size-24 shrink-0 sm:mt-1 sm:size-32"
+                aria-hidden="true"
+            >
                 <AvatarImage
                     alt={`${RESUME_DATA.name}'s profile picture`}
                     src={RESUME_DATA.avatarUrl}

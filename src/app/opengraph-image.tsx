@@ -2,8 +2,6 @@ import { headers } from "next/headers";
 import { ImageResponse } from "next/og";
 import { RESUME_DATA } from "../data/resume-data";
 
-export const runtime = "edge";
-
 export const alt = "Minimalist Resume";
 export const size = {
     width: 1200,
@@ -13,7 +11,7 @@ export const size = {
 export const contentType = "image/png";
 
 export default async function Image() {
-    const requestHeaders = headers();
+    const requestHeaders = await headers();
     const host = requestHeaders.get("host") ?? "devasheeshmishra.com";
     const protocol = requestHeaders.get("x-forwarded-proto") ?? "https";
     const avatarResponse = await fetch(

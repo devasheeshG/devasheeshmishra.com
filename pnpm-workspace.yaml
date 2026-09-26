@@ -1,3 +1,5 @@
+packages:
+  - '.'
 allowBuilds:
   - '@apollo/protobufjs'
   - '@vercel/speed-insights'

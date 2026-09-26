@@ -3,10 +3,10 @@
 # Minimalist CV
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBartoszJarocki%2Fcv)
-[![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
-[![pnpm](https://img.shields.io/badge/pnpm-8+-F69220?logo=pnpm)](https://pnpm.io/)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-7.0-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4.3-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+[![pnpm](https://img.shields.io/badge/pnpm-9-F69220?logo=pnpm)](https://pnpm.io/)
 [![Docker](https://img.shields.io/badge/Docker-ready-2496ED?logo=docker)](https://www.docker.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -19,7 +19,7 @@ A clean and modern web app that renders a minimalist CV/Resume with a print-frie
 - 📱 **Responsive** - Looks great on all devices, from mobile to desktop
 - 🖨️ **Print Optimized** - Specially designed print styles for physical copies
 - ⌨️ **Keyboard Navigation** - Press `Cmd/Ctrl + K` to quickly navigate through sections
-- 🚀 **Fast Performance** - Built with Next.js 14 and optimized for Core Web Vitals
+- 🚀 **Fast Performance** - Built with Next.js 16 and optimized for Core Web Vitals
 - 🔄 **Auto Layout** - Sections automatically adjust based on your content
 - 📊 **GraphQL API** - Access your resume data programmatically at `/graphql`
 - 🎯 **SEO Friendly** - Optimized metadata for better search visibility
@@ -27,7 +27,7 @@ A clean and modern web app that renders a minimalist CV/Resume with a print-frie
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **UI Components**: [shadcn/ui](https://ui.shadcn.com/) (Radix UI)
@@ -39,8 +39,8 @@ A clean and modern web app that renders a minimalist CV/Resume with a print-frie
 
 ### Prerequisites
 
-- Node.js 18+ 
-- pnpm 8+
+- Node.js 20.9+
+- pnpm 9.15.9
 
 ### Installation
 
@@ -75,7 +75,8 @@ A clean and modern web app that renders a minimalist CV/Resume with a print-frie
 pnpm dev          # Start development server
 pnpm build        # Build for production
 pnpm start        # Start production server
-pnpm lint         # Run ESLint
+pnpm lint         # Run Biome lint checks
+pnpm check        # Run Biome lint and formatting checks
 ```
 
 ## 📁 Project Structure

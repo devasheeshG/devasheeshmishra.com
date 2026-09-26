@@ -1,43 +1,9 @@
 import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
 import type { RESUME_DATA } from "@/data/resume-data";
-import { cn } from "@/lib/utils";
 
 type WorkExperience = (typeof RESUME_DATA)["work"][number];
-type WorkBadges = readonly string[];
-
-interface BadgeListProps {
-    className?: string;
-    badges: WorkBadges;
-}
-
-/**
- * Renders a list of badges for work experience
- * Handles both mobile and desktop layouts through className prop
- */
-function BadgeList({ className, badges }: BadgeListProps) {
-    if (badges.length === 0) return null;
-
-    return (
-        <ul
-            className={cn("inline-flex list-none gap-x-1 p-0", className)}
-            aria-label="Technologies used"
-        >
-            {badges.map((badge) => (
-                <li key={badge}>
-                    <Badge
-                        variant="secondary"
-                        className="align-middle text-xs print:px-1 print:py-0.5 print:text-[8px] print:leading-tight"
-                    >
-                        {badge}
-                    </Badge>
-                </li>
-            ))}
-        </ul>
-    );
-}
 
 interface WorkPeriodProps {
     start: WorkExperience["start"];
@@ -129,11 +95,10 @@ interface WorkExperienceItemProps {
 
 /**
  * Individual work experience card component
- * Handles responsive layout for badges (mobile/desktop) and displays location separately
+ * Displays company, role, period, location, and description
  */
 function WorkExperienceItem({ work }: WorkExperienceItemProps) {
-    const { company, link, badges, title, start, end, description, logoUrl } =
-        work;
+    const { company, link, title, start, end, description, logoUrl } = work;
     const location = "location" in work ? work.location : undefined;
 
     return (
@@ -143,10 +108,6 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none print:text-sm">
                         <CompanyLogo logoUrl={logoUrl} company={company} />
                         <CompanyLink company={company} link={link} />
-                        <BadgeList
-                            className="hidden gap-x-1 sm:inline-flex"
-                            badges={badges}
-                        />
                     </h3>
                     <WorkPeriod start={start} end={end} location={location} />
                 </div>
@@ -159,12 +120,6 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
             <CardContent>
                 <div className="mt-2 text-xs text-foreground/80 print:mt-1 print:text-[10px] text-pretty">
                     {description}
-                </div>
-                <div className="mt-2">
-                    <BadgeList
-                        className="-mx-2 flex-wrap gap-1 sm:hidden"
-                        badges={badges}
-                    />
                 </div>
             </CardContent>
         </Card>

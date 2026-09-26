@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import "@theme-toggles/react/css/Classic.css";
+import "@theme-toggles/react/styles/classic.css";
 import { Classic } from "@theme-toggles/react";
 
 export function ThemeToggle() {
@@ -55,11 +55,10 @@ export function ThemeToggle() {
 
     return (
         <div className="fixed top-4 right-4 z-50 print:hidden">
-            {/* @ts-expect-error: Classic's type definitions are incompatible with TS 5 DOM typings, runtime usage is valid */}
             <Classic
                 duration={750}
                 toggled={isDark}
-                onToggle={(toggled) => applyTheme(toggled)}
+                onClick={() => applyTheme(!isDark)}
                 aria-label="Toggle theme"
                 title="Toggle theme"
                 className={`${BTN_CLASSES} text-[22px]`}

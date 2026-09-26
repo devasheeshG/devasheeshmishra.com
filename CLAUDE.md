@@ -12,7 +12,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a **Minimalist CV/Resume web application** built with Next.js 14, React, TypeScript, and Tailwind CSS. The app renders a clean, print-friendly CV layout with data configured in a single file.
+This is a **Minimalist CV/Resume web application** built with Next.js 16, React 19, TypeScript, and Tailwind CSS 4. The app renders a clean, print-friendly CV layout with data configured in a single file.
 
 ## Commands
 
@@ -48,7 +48,7 @@ docker compose down      # Stop the container
 - **`/src/images/logos/`** - Company logo components
 
 ### Key Technologies
-- **Framework**: Next.js 14 with App Router
+- **Framework**: Next.js 16 with App Router
 - **Language**: TypeScript with decorators enabled
 - **Styling**: Tailwind CSS with custom theme extensions
 - **UI Components**: shadcn/ui (Radix UI based)

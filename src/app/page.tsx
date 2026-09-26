@@ -12,6 +12,7 @@ import { Education } from "./components/Education";
 import { Extracurricular } from "./components/Extracurricular";
 import { Header } from "./components/Header";
 import { Interest } from "./components/Interest";
+import { PianoPlayer } from "./components/PianoPlayer";
 import { Projects } from "./components/Projects";
 import { Research } from "./components/Research";
 import { Skills } from "./components/Skills";
@@ -154,6 +155,7 @@ export default function ResumePage() {
                 </nav>
                 <ThemeToggle />
             </main>
+            <PianoPlayer />
         </>
     );
 }

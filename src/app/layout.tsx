@@ -81,14 +81,14 @@ export const viewport: Viewport = {
     maximumScale: 5,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
     // SSR: set initial theme class from cookie to avoid flash
     // Default to dark mode if no cookie is set
-    const themeCookie = cookies().get("theme")?.value;
+    const themeCookie = (await cookies()).get("theme")?.value;
     const isDark = themeCookie !== "light"; // Default to dark
     const htmlClass = `${inter.className} ${isDark ? "dark" : ""}`.trim();
 
@@ -113,7 +113,8 @@ export default function RootLayout({
           `}
                 </Script>
             </head>
-            <body>
+            {/* Browser extensions such as Grammarly can inject attributes on body before hydration. */}
+            <body suppressHydrationWarning={true}>
                 <ErrorBoundary>{children}</ErrorBoundary>
             </body>
             <SpeedInsights />

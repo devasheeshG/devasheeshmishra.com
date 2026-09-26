@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../tailwind.config.js";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
     :root {
@@ -88,11 +88,14 @@
     html,
     body {
         height: auto;
+        /* biome-ignore lint/complexity/noImportantStyles: Print needs to override page overflow utilities. */
         overflow: visible !important;
     }
     /* Remove container padding/margins on print to maximize page usage */
     .container {
+        /* biome-ignore lint/complexity/noImportantStyles: Print needs to override layout padding utilities. */
         padding-left: 0 !important;
+        /* biome-ignore lint/complexity/noImportantStyles: Print needs to override layout padding utilities. */
         padding-right: 0 !important;
     }
     /* Force light theme tokens for print even if .dark is set */

@@ -4,4 +4,4 @@ import { LinkedInIcon } from "./LinkedInIcon";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 import { XIcon } from "./x-icon";
 
-export { GitHubIcon, LinkedInIcon, HuggingFaceIcon, WhatsAppIcon, XIcon };
+export { GitHubIcon, HuggingFaceIcon, LinkedInIcon, WhatsAppIcon, XIcon };

@@ -129,6 +129,11 @@
       "attributePosition": "auto"
     }
   },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
   "json": {
     "formatter": {
       "enabled": true,
