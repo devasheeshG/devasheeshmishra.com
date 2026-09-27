@@ -12,7 +12,7 @@ export const RESUME_DATA = {
     location: "San Francisco, CA, USA",
     locationLink: "https://www.google.com/maps/place/San+Francisco",
     personalWebsiteUrl: "https://devasheeshmishra.com",
-    about: "Founder and CTO of Recallr AI and an AI/ML and backend engineer specializing in memory for AI systems. My interests include AI agents, speech AI, and personal assistants. Authored three studies on scalable long-term memory, retrieval-free parametric memory, and hallucination dynamics in language models. I previously founded an AI home-automation startup that was later acquired. Attended Founders, Inc.'s Canopy 2026 and Y Combinator's AI Startup School in SF.",
+    about: "Founder and CTO of Recallr AI and an AI/ML and backend engineer specializing in memory for AI systems. Interests include AI agents, speech AI, and personal assistants. Authored three studies on scalable long-term memory, retrieval-free parametric memory, and hallucination dynamics in language models. Previously founded an AI home-automation startup that was later acquired. Attended Founders, Inc.'s Canopy 2026 and Y Combinator's AI Startup School in SF.",
     avatarUrl: "/assets/devasheesh-avatar.jpg",
     contact: {
         email: "devasheesh@recallrai.com",
@@ -311,7 +311,8 @@ export const RESUME_DATA = {
                 <ul className="list-inside list-disc">
                     <li>
                         Contributed as a core member while organizing the
-                        Phoenix Hackathon, where I also won first place.
+                        Phoenix Hackathon and won first place in the
+                        competition.
                     </li>
                     <li>
                         Organized Hack-Innovate, a two-day hackathon that
@@ -640,31 +641,31 @@ export const RESUME_DATA = {
         },
         {
             title: "Google InnoSprint Hackathon",
-            description: "First runner-up",
+            description: "First runner-up.",
             year: "2023",
             link: "https://www.linkedin.com/posts/devasheesh-mishra_hackathon-innosprint-innovation-activity-7162092090531721216-6BG5",
         },
         {
             title: "Phoenix Hackathon",
-            description: "Won first place",
+            description: "Won first place.",
             year: "2022",
             link: "https://www.linkedin.com/posts/devasheesh-mishra_srmist-srmuniversity-hackathon-activity-7162482926939492352-rLm4",
         },
         {
             title: "Code-A-Thon",
-            description: "First runner-up",
+            description: "First runner-up.",
             year: "2022",
             link: "https://www.linkedin.com/posts/devasheesh-mishra_hackathonrunnerup-innovativeexcellence-srmist-activity-7162845340889440256-HPDg",
         },
         {
             title: "Live-Project Competition",
-            description: "Second runner-up",
+            description: "Second runner-up.",
             year: "2023",
             link: "https://www.linkedin.com/posts/devasheesh-mishra_hackathonachievement-innovativeexcellence-srmist-activity-7163207701899010048-XfRD",
         },
         {
             title: "Smart India Hackathon",
-            description: "First runner-up at the college level",
+            description: "First runner-up at the college level.",
             year: "2023",
             link: "",
         },
