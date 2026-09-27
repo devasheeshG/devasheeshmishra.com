@@ -12,7 +12,7 @@ export const RESUME_DATA = {
     location: "San Francisco, CA, USA",
     locationLink: "https://www.google.com/maps/place/San+Francisco",
     personalWebsiteUrl: "https://devasheeshmishra.com",
-    about: "Founder and CTO of Recallr AI and an AI/ML and backend engineer specializing in memory for AI systems. Interests include AI agents, speech AI, and personal assistants. Authored three studies on scalable long-term memory, retrieval-free parametric memory, and hallucination dynamics in language models. Previously founded an AI home-automation startup that was later acquired. Attended Founders, Inc.'s Canopy 2026 and Y Combinator's AI Startup School in SF.",
+    about: "Founder and CTO of Recallr AI and an AI/ML and backend engineer specializing in memory for AI systems. Interested in AI agents, speech AI, and personal assistants. Authored three studies on scalable long-term memory, retrieval-free parametric memory, and hallucination dynamics in language models. Previously founded an AI home-automation startup that was later acquired. Attended Founders, Inc.'s Canopy 2026 and Y Combinator's AI Startup School in SF.",
     avatarUrl: "/assets/devasheesh-avatar.jpg",
     contact: {
         email: "devasheesh@recallrai.com",
