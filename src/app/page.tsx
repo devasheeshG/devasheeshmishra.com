@@ -10,6 +10,7 @@ import { Achievements } from "./components/Achievements";
 import { Certifications } from "./components/Certifications";
 import { Education } from "./components/Education";
 import { Extracurricular } from "./components/Extracurricular";
+import { GitHubActivity } from "./components/GitHubActivity";
 import { Header } from "./components/Header";
 import { Interest } from "./components/Interest";
 import { PianoPlayer } from "./components/PianoPlayer";
@@ -86,6 +87,12 @@ export default function ResumePage() {
                     </SectionErrorBoundary>
 
                     <div className="space-y-8 print:space-y-4">
+                        <SectionErrorBoundary sectionName="GitHub Activity">
+                            <Suspense fallback={<SectionSkeleton lines={3} />}>
+                                <GitHubActivity />
+                            </Suspense>
+                        </SectionErrorBoundary>
+
                         <SectionErrorBoundary sectionName="Work Experience">
                             <Suspense fallback={<SectionSkeleton lines={6} />}>
                                 <WorkExperience work={RESUME_DATA.work} />
